@@ -14,3 +14,12 @@ DOMAIN-SUFFIX,gandi.net
 DOMAIN-SUFFIX,snapdrop.net
 DOMAIN,download.jetbrains.com
 DOMAIN,origin-a.akamaihd.net // Origin Download
+
+# ACL4SSR订阅直连
+DOMAIN-KEYWORD,id9
+DOMAIN-KEYWORD,dler
+
+
+# Kuromis订阅直连
+DOMAIN-KEYWORD,kuromisubs
+
