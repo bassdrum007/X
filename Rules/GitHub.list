@@ -4,62 +4,51 @@
 
 # 域名关键字匹配 (DOMAIN-KEYWORD):
 # 匹配域名中包含指定关键字的流量。
-DOMAIN-KEYWORD,openai # 匹配包含“openai”的域名，如openai.com
-DOMAIN-KEYWORD,anthropic # 匹配包含“anthropic”的域名，如anthropic.com
-DOMAIN-KEYWORD,Claude # 匹配包含“Claude”的域名，如claude.ai
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,Claude
 
-# 域名后缀匹配 (DOMAIN-SUFFIX) 及特定域名 (DOMAIN):
-# DOMAIN-SUFFIX 匹配以指定后缀结尾的域名（包括子域名）。
-# DOMAIN 精确匹配指定的域名。
+DOMAIN-SUFFIX,tktn.be
 
-DOMAIN-SUFFIX,tktn.be # 匹配以tktn.be结尾的域名
-DOMAIN-SUFFIX,googleusercontent.com # 匹配以googleusercontent.com结尾的域名，常用于Google服务
-DOMAIN-SUFFIX,googleapis.com # 匹配以googleapis.com结尾的域名，常用于Google API服务
+DOMAIN,copilot.microsoft.com
+DOMAIN-SUFFIX,bing.com
 
-DOMAIN,copilot.microsoft.com # 精确匹配copilot.microsoft.com域名
-DOMAIN-SUFFIX,bing.com # 匹配以bing.com结尾的域名，包括Bing Chat/Copilot相关服务
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,circumlunar.space
+DOMAIN-SUFFIX,vulpes.one
+DOMAIN-SUFFIX,mozz.us
+DOMAIN-SUFFIX,conman.org
+DOMAIN-SUFFIX,bortzmeyer.org
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,difyai.com
+DOMAIN-SUFFIX,genspark.ai
 
-DOMAIN-SUFFIX,chatgpt.com # 匹配以chatgpt.com结尾的域名
-DOMAIN-SUFFIX,auth0.com # 匹配以auth0.com结尾的域名，常用于身份验证服务
-DOMAIN-SUFFIX,client-api.arkoselabs.com # 匹配以client-api.arkoselabs.com结尾的域名，常用于验证码/反机器人服务
-DOMAIN-SUFFIX,events.statsigapi.net # 匹配以events.statsigapi.net结尾的域名，常用于数据统计服务
-DOMAIN-SUFFIX,featuregates.org # 匹配以featuregates.org结尾的域名，常用于功能开关服务
-DOMAIN-SUFFIX,identrust.com # 匹配以identrust.com结尾的域名，常用于证书服务
-DOMAIN-SUFFIX,intercom.io # 匹配以intercom.io结尾的域名，常用于客户支持/聊天服务
-DOMAIN-SUFFIX,intercomcdn.com # 匹配以intercomcdn.com结尾的域名，常用于客户支持/聊天服务CDN
-DOMAIN-SUFFIX,oaistatic.com # 匹配以oaistatic.com结尾的域名，常用于OpenAI静态资源
-DOMAIN-SUFFIX,oaiusercontent.com # 匹配以oaiusercontent.com结尾的域名，常用于OpenAI用户内容
-DOMAIN-SUFFIX,openai.com # 匹配以openai.com结尾的域名
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net # 匹配以openaiapi-site.azureedge.net结尾的域名，常用于OpenAI API站点
-DOMAIN-SUFFIX,sentry.io # 匹配以sentry.io结尾的域名，常用于错误监控服务
-DOMAIN-SUFFIX,stripe.com # 匹配以stripe.com结尾的域名，常用于支付服务
-DOMAIN-SUFFIX,bard.google.com # 匹配以bard.google.com结尾的域名
-DOMAIN-SUFFIX,gemini.google.com # 匹配以gemini.google.com结尾的域名
-DOMAIN-SUFFIX,makersuite.google.com # 匹配以makersuite.google.com结尾的域名
-DOMAIN-SUFFIX,anthropic.com # 匹配以anthropic.com结尾的域名
-DOMAIN-SUFFIX,claude.ai # 匹配以claude.ai结尾的域名
-DOMAIN-SUFFIX,circumlunar.space # 匹配以circumlunar.space结尾的域名
-DOMAIN-SUFFIX,vulpes.one # 匹配以vulpes.one结尾的域名
-DOMAIN-SUFFIX,mozz.us # 匹配以mozz.us结尾的域名
-DOMAIN-SUFFIX,conman.org # 匹配以conman.org结尾的域名
-DOMAIN-SUFFIX,bortzmeyer.org # 匹配以bortzmeyer.org结尾的域名
-DOMAIN-SUFFIX,groq.com # 匹配以groq.com结尾的域名
-DOMAIN-SUFFIX,difyai.com # 匹配以difyai.com结尾的域名
-DOMAIN-SUFFIX,genspark.ai # 匹配以genspark.ai结尾的域名
-
-DOMAIN-SUFFIX,grok.com # 匹配以grok.com结尾的域名
-DOMAIN-SUFFIX,x.com # 匹配以x.com结尾的域名
-DOMAIN-SUFFIX,x.ai # 匹配以x.ai结尾的域名
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metademolab.com
+DOMAIN-SUFFIX,perplexity.ai
 
 # 以下为原列表中注释掉的，如果需要可以取消注释并指定代理组
-# DOMAIN-SUFFIX,googleapis.com
 # DOMAIN-SUFFIX,googleapis.cn
 # DOMAIN-SUFFIX,gstatic.com
 # DOMAIN-SUFFIX,signalr.net
-
-DOMAIN-SUFFIX,meta.ai # 匹配以meta.ai结尾的域名
-DOMAIN-SUFFIX,metademolab.com # 匹配以metademolab.com结尾的域名
-DOMAIN-SUFFIX,perplexity.ai # 匹配以perplexity.ai结尾的域名
 
 # NAME: GitHub
 # AUTHOR: blackmatrix7
@@ -99,4 +88,4 @@ DOMAIN-SUFFIX,opensource.guide
 DOMAIN-SUFFIX,rawgit.com
 DOMAIN-SUFFIX,rawgithub.com
 DOMAIN-SUFFIX,repo.new
-DOMAIN-KEYWORD,github # 匹配包含“github”关键字的域名
+DOMAIN-KEYWORD,github
