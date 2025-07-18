@@ -79,7 +79,7 @@ DOMAIN-SUFFIX,githubpreview.dev
 DOMAIN-SUFFIX,githubstatus.com
 DOMAIN-SUFFIX,githubuniverse.com
 DOMAIN-SUFFIX,thegithubshop.com
-DOMAIN-SUFFIX,githubusercontent.com # 注意：此规则已在上方AI服务规则中包含，此处保留以示完整性
+DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,myoctocat.com
 DOMAIN-SUFFIX,npm.community
 DOMAIN-SUFFIX,npmjs.com
