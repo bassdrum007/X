@@ -89,3 +89,7 @@ DOMAIN-SUFFIX,rawgit.com
 DOMAIN-SUFFIX,rawgithub.com
 DOMAIN-SUFFIX,repo.new
 DOMAIN-KEYWORD,github
+
+
+# 添加的关键字：匹配域名中包含 goodiptv
+DOMAIN-KEYWORD,goodiptv
