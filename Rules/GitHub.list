@@ -91,5 +91,7 @@ DOMAIN-SUFFIX,repo.new
 DOMAIN-KEYWORD,github
 
 
-# 添加的关键字：匹配域名中包含 goodiptv
+# 添加的关键字：匹配域名中包含的关键词
 DOMAIN-KEYWORD,goodiptv
+DOMAIN-KEYWORD,mmcdn
+DOMAIN-KEYWORD,doppiocdn
