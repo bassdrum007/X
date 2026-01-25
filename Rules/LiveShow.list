@@ -1,6 +1,6 @@
 # 内容：欧美直播、视频托管及 IPTV 深度 CDN 梳理版
-# 更新：2026-01-24
-# 逻辑：全量检索播放 CDN 架构，覆盖视频流、静态资源、解析接口和播放器索引
+# 更新：2026-01-25
+# 优化重点：深度检索补全 DoodStream (doodcdn)、Vidplay (VizCloud) 及 Streamtape 核心播放 CDN
 
 # ============================================================
 # 1. 核心直播流分发网络 (Live Streaming CDNs)
@@ -36,7 +36,7 @@ DOMAIN-SUFFIX,myfreecams.com
 # 2. 视频托管与高动态集群 (Video Hosting & Storage Clusters)
 # ============================================================
 
-# --- Vidplay / MyVidPlay / Vidstream 深度集群 ---
+# --- Vidplay / MyVidPlay / Vidstream 深度集群 (全部播放 CDN) ---
 DOMAIN-SUFFIX,myvidplay.com
 DOMAIN-SUFFIX,mvidplay.com
 DOMAIN-SUFFIX,vidplay.online
@@ -52,6 +52,7 @@ DOMAIN-SUFFIX,vidplay.cc
 DOMAIN-SUFFIX,vidplay.org
 DOMAIN-SUFFIX,vidplay.xyz
 DOMAIN-SUFFIX,vidplay.tv
+# 核心视频流出口 (CDN Nodes)
 DOMAIN-SUFFIX,vidstream.pro
 DOMAIN-SUFFIX,vizcloud.online
 DOMAIN-SUFFIX,vizcloud.xyz
@@ -69,14 +70,17 @@ DOMAIN-KEYWORD,myvidplay
 DOMAIN-KEYWORD,vizcloud
 DOMAIN-KEYWORD,megacloud
 
-# --- DoodStream 集群 (含最新日志补全) ---
+# --- DoodStream 集群 (深度补全 doodcdn 系列) ---
+# 该系列负责 DoodStream 所有的切片传输和静态资源加载
 DOMAIN-SUFFIX,doodstream.com
 DOMAIN-SUFFIX,doodstream.co
 DOMAIN-SUFFIX,d0000d.com
+DOMAIN-SUFFIX,d0000d.net
 DOMAIN-SUFFIX,ds2play.com
 DOMAIN-SUFFIX,ds2video.com
 DOMAIN-SUFFIX,doodcdn.io
 DOMAIN-SUFFIX,doodcdn.co
+DOMAIN-SUFFIX,doodcdn.com
 DOMAIN-SUFFIX,dood.so
 DOMAIN-SUFFIX,dood.la
 DOMAIN-SUFFIX,dood.wf
@@ -100,6 +104,7 @@ DOMAIN-SUFFIX,dood.work
 DOMAIN-SUFFIX,dood.online
 DOMAIN-KEYWORD,dood
 DOMAIN-KEYWORD,d0000d
+DOMAIN-KEYWORD,doodcdn
 
 # --- Streamtape & Stape 集群 ---
 DOMAIN-SUFFIX,streamtape.com
