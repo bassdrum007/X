@@ -1,17 +1,20 @@
-# 内容：欧美直播、视频托管及 IPTV 深度 CDN 梳理版
+# 内容：欧美直播、视频托管及 IPTV 深度 CDN 梳理版 (最终整合版)
 # 更新：2026-01-25
-# 优化重点：深度检索补全 DoodStream (doodcdn)、Vidplay (VizCloud) 及 Streamtape 核心播放 CDN
+# 优化：基于用户日志抓取高流量节点 (highwebmedia, doodcdn, alhapi, IP-CIDR)
 
 # ============================================================
-# 1. 核心直播流分发网络 (Live Streaming CDNs)
+# 1. 核心直播流分发网络 (Live Streaming CDNs - 流量大户)
 # ============================================================
 
-# --- Chaturbate 体系 (核心：mmcdn) ---
+# --- Chaturbate / Highwebmedia 体系 ---
+# 日志显示实时信令走 highwebmedia，视频切片走 mmcdn 边缘节点
 DOMAIN-SUFFIX,mmcdn.com
 DOMAIN-SUFFIX,cbstatic.com
 DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-SUFFIX,highwebmedia.com
 DOMAIN-KEYWORD,mmcdn
 DOMAIN-KEYWORD,chaturbate
+DOMAIN-KEYWORD,highwebmedia
 
 # --- Stripchat 体系 (核心：doppiocdn) ---
 DOMAIN-SUFFIX,doppiocdn.com
@@ -21,14 +24,11 @@ DOMAIN-SUFFIX,xhamsterlive.com
 DOMAIN-KEYWORD,doppiocdn
 DOMAIN-KEYWORD,stripchat
 
-# --- Bongacams & Camsoda 体系 ---
+# --- 其他直播 CDN ---
 DOMAIN-SUFFIX,bngcdn.com
 DOMAIN-SUFFIX,bongacams.com
 DOMAIN-SUFFIX,camsoda.com
 DOMAIN-SUFFIX,csstatic.com
-DOMAIN-KEYWORD,bngcdn
-
-# --- MyFreeCams 体系 ---
 DOMAIN-SUFFIX,mfcimg.com
 DOMAIN-SUFFIX,myfreecams.com
 
@@ -36,7 +36,8 @@ DOMAIN-SUFFIX,myfreecams.com
 # 2. 视频托管与高动态集群 (Video Hosting & Storage Clusters)
 # ============================================================
 
-# --- Vidplay / MyVidPlay / Vidstream 深度集群 (全部播放 CDN) ---
+# --- Vidplay / MyVidPlay / Vidstream 深度集群 ---
+# 承载了大量 .m3u8 索引和 .ts 分片，补全了 VizCloud 和 MegaCloud
 DOMAIN-SUFFIX,myvidplay.com
 DOMAIN-SUFFIX,mvidplay.com
 DOMAIN-SUFFIX,vidplay.online
@@ -44,7 +45,6 @@ DOMAIN-SUFFIX,vidplay.site
 DOMAIN-SUFFIX,vidplay.me
 DOMAIN-SUFFIX,vidplay.to
 DOMAIN-SUFFIX,vidplay.biz
-DOMAIN-SUFFIX,vidplay.info
 DOMAIN-SUFFIX,vidplay.pro
 DOMAIN-SUFFIX,vidplay.icu
 DOMAIN-SUFFIX,vidplay.vip
@@ -52,7 +52,6 @@ DOMAIN-SUFFIX,vidplay.cc
 DOMAIN-SUFFIX,vidplay.org
 DOMAIN-SUFFIX,vidplay.xyz
 DOMAIN-SUFFIX,vidplay.tv
-# 核心视频流出口 (CDN Nodes)
 DOMAIN-SUFFIX,vidstream.pro
 DOMAIN-SUFFIX,vizcloud.online
 DOMAIN-SUFFIX,vizcloud.xyz
@@ -70,8 +69,8 @@ DOMAIN-KEYWORD,myvidplay
 DOMAIN-KEYWORD,vizcloud
 DOMAIN-KEYWORD,megacloud
 
-# --- DoodStream 集群 (深度补全 doodcdn 系列) ---
-# 该系列负责 DoodStream 所有的切片传输和静态资源加载
+# --- DoodStream 集群 (深度补全 doodcdn) ---
+# 日志中发现的高频下载点：doodcdn.io, doodcdn.co
 DOMAIN-SUFFIX,doodstream.com
 DOMAIN-SUFFIX,doodstream.co
 DOMAIN-SUFFIX,d0000d.com
@@ -98,15 +97,12 @@ DOMAIN-SUFFIX,dood.stream
 DOMAIN-SUFFIX,dood.tf
 DOMAIN-SUFFIX,dood.cc
 DOMAIN-SUFFIX,dood.pro
-DOMAIN-SUFFIX,dood.click
-DOMAIN-SUFFIX,dood.club
-DOMAIN-SUFFIX,dood.work
 DOMAIN-SUFFIX,dood.online
 DOMAIN-KEYWORD,dood
 DOMAIN-KEYWORD,d0000d
 DOMAIN-KEYWORD,doodcdn
 
-# --- Streamtape & Stape 集群 ---
+# --- Streamtape & Stape 家族 ---
 DOMAIN-SUFFIX,streamtape.com
 DOMAIN-SUFFIX,streamtape.net
 DOMAIN-SUFFIX,streamtape.to
@@ -115,40 +111,52 @@ DOMAIN-SUFFIX,stape.one
 DOMAIN-SUFFIX,stape.video
 DOMAIN-SUFFIX,stape.site
 DOMAIN-SUFFIX,stape.me
-DOMAIN-SUFFIX,streamadblock.com
 DOMAIN-KEYWORD,streamtape
 DOMAIN-KEYWORD,stape
 
-# --- MixDrop / Voe / UpStream / Vidmoly ---
+# --- 其他常见分发站 ---
 DOMAIN-SUFFIX,mixdrop.co
 DOMAIN-SUFFIX,mixdrop.to
-DOMAIN-SUFFIX,mixdrop.ag
-DOMAIN-SUFFIX,mixdrop.sx
-DOMAIN-SUFFIX,mixdrop.ch
-DOMAIN-SUFFIX,mixdrop.bz
 DOMAIN-SUFFIX,voe.sx
-DOMAIN-SUFFIX,voe-network.net
 DOMAIN-SUFFIX,upstream.to
-DOMAIN-SUFFIX,upstream.bz
 DOMAIN-SUFFIX,vidmoly.me
-DOMAIN-SUFFIX,vidmoly.to
-DOMAIN-SUFFIX,vidmoly.net
-DOMAIN-KEYWORD,mixdrop
-DOMAIN-KEYWORD,upstream
 
 # ============================================================
-# 3. IPTV 与 电视直播 (IPTV & Global Delivery)
+# 3. 关联工具与 IPTV (Associated Tools & IPTV)
 # ============================================================
+# 日志显示：如果你使用 Aloha 浏览器，这些 API 请求必须走专线
+DOMAIN-SUFFIX,alhapi.com
+DOMAIN-SUFFIX,alohaprofile.com
+
+# --- IPTV 订阅源 ---
 DOMAIN-KEYWORD,goodiptv
 DOMAIN-KEYWORD,iptv
 DOMAIN-KEYWORD,stream-link
 DOMAIN-KEYWORD,m3u8-delivery
 
 # ============================================================
-# 4. 通用关键词与 CDN 兜底
+# 4. IP-CIDR 规则补全 (日志抓取的真实流量 IP 段)
 # ============================================================
-DOMAIN-KEYWORD,mmcdn
-DOMAIN-KEYWORD,doppiocdn
+
+# --- CDN77 / DataCamp (日志 IP: 131.153.85.61) ---
+IP-CIDR,131.153.0.0/16,no-resolve
+IP-CIDR,89.187.160.0/19,no-resolve
+IP-CIDR,45.10.0.0/16,no-resolve
+
+# --- OVH Hosting ---
+IP-CIDR,141.94.0.0/16,no-resolve
+IP-CIDR,51.0.0.0/8,no-resolve
+
+# --- Cloudflare 视频流 (日志 IP: 104.18.207.112) ---
+IP-CIDR,172.64.0.0/13,no-resolve
+IP-CIDR,104.16.0.0/12,no-resolve
+
+# --- Fastly CDN ---
+IP-CIDR,151.101.0.0/16,no-resolve
+
+# ============================================================
+# 5. 通用关键词与兜底
+# ============================================================
 DOMAIN-KEYWORD,camstatic
 DOMAIN-KEYWORD,stream-content
 DOMAIN-KEYWORD,camwhores
