@@ -1,0 +1,33 @@
+# 欧美直播与视频专线规则
+# 包含 Chaturbate, Stripchat, MyFreeCams, DoodStream, MyVidPlay
+# 策略：关键词捕捉 + 动态域名覆盖
+
+# --- Chaturbate ---
+DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-KEYWORD,chaturbate
+
+# --- MyFreeCams ---
+DOMAIN-SUFFIX,myfreecams.com
+DOMAIN-SUFFIX,mfcimg.com
+
+# --- Stripchat ---
+DOMAIN-SUFFIX,stripchat.com
+DOMAIN-SUFFIX,strpst.com
+DOMAIN-SUFFIX,xhamsterlive.com
+
+# --- MyVidPlay ---
+DOMAIN-SUFFIX,myvidplay.com
+DOMAIN-KEYWORD,myvidplay
+
+# --- DoodStream (多变域名) ---
+DOMAIN-SUFFIX,doodstream.com
+DOMAIN-SUFFIX,dood.so
+DOMAIN-SUFFIX,dood.la
+DOMAIN-SUFFIX,dood.wf
+DOMAIN-SUFFIX,dood.cx
+DOMAIN-SUFFIX,dood.sh
+DOMAIN-KEYWORD,dood
+
+# --- 通用关键词 (兜底) ---
+DOMAIN-KEYWORD,mmcdn
+DOMAIN-KEYWORD,cam
