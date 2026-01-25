@@ -4,7 +4,7 @@
 # 新增：Lovense 交互 API、Google CDN 与 AWS 传输节点
 # 修复：补全了 assets.striiiipst.com (Stripchat) 与 162.249.x.x / 163.237.x.x (CDN77)
 # 验证：确认覆盖了 162.249.19.206 及 163.237.211.249 等 DataCamp 高流量节点
-# 补充：新增 AWS CloudFront 节点 (13.35.185.57)
+# 补充：新增 AWS CloudFront 节点 (13.35.185.57)、新增 camsmut.com
 
 # ============================================================
 # 1. 核心直播流分发网络 (Live Streaming CDNs - 流量大户)
@@ -31,6 +31,7 @@ DOMAIN-KEYWORD,stripchat
 # --- 其他直播 CDN ---
 DOMAIN-SUFFIX,bngcdn.com
 DOMAIN-SUFFIX,bongacams.com
+DOMAIN-SUFFIX,camsmut.com
 DOMAIN-SUFFIX,camsoda.com
 DOMAIN-SUFFIX,csstatic.com
 DOMAIN-SUFFIX,mfcimg.com
