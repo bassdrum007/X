@@ -2,6 +2,7 @@
 # 更新：2026-01-25
 # 优化：基于用户日志抓取高流量节点 (highwebmedia, doodcdn, alhapi, IP-CIDR)
 # 新增：Lovense 交互 API、Google CDN 与 AWS 传输节点
+# 修复：补全了 assets.striiiipst.com (Stripchat) 与 162.249.x.x / 163.237.x.x (CDN77)
 
 # ============================================================
 # 1. 核心直播流分发网络 (Live Streaming CDNs - 流量大户)
@@ -16,9 +17,10 @@ DOMAIN-KEYWORD,mmcdn
 DOMAIN-KEYWORD,chaturbate
 DOMAIN-KEYWORD,highwebmedia
 
-# --- Stripchat 体系 (核心：doppiocdn) ---
+# --- Stripchat 体系 (核心：doppiocdn + striiiipst) ---
 DOMAIN-SUFFIX,doppiocdn.com
 DOMAIN-SUFFIX,strpst.com
+DOMAIN-SUFFIX,striiiipst.com
 DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,xhamsterlive.com
 DOMAIN-KEYWORD,doppiocdn
@@ -126,7 +128,7 @@ DOMAIN-SUFFIX,sb-cd.com
 DOMAIN-SUFFIX,eporner.com
 
 # ============================================================
-# 3. 关联工具与浏览器 (Associated Tools & Interaction)
+# 3. 关联工具与互动 (Associated Tools & Interaction)
 # ============================================================
 # Lovense API: 远程同步互动插件
 DOMAIN-SUFFIX,lovense-api.com
@@ -146,7 +148,10 @@ DOMAIN-KEYWORD,m3u8-delivery
 # 4. IP-CIDR 规则补全 (基于流量抓取的真实分发节点)
 # ============================================================
 
-# --- CDN77 / DataCamp / 131.153 (重点捕获) ---
+# --- CDN77 / DataCamp / 131.153 / 162.249 / 163.237 (重点捕获) ---
+# 该段承载了大量欧美视频站的视频切片下载
+IP-CIDR,163.237.0.0/16,no-resolve
+IP-CIDR,162.249.0.0/16,no-resolve
 IP-CIDR,131.153.0.0/16,no-resolve
 IP-CIDR,89.187.160.0/19,no-resolve
 IP-CIDR,45.10.0.0/16,no-resolve
@@ -155,11 +160,11 @@ IP-CIDR,45.10.0.0/16,no-resolve
 IP-CIDR,141.94.0.0/16,no-resolve
 IP-CIDR,51.0.0.0/8,no-resolve
 
-# --- Amazon AWS / CloudFront (基于日志 IP: 18.172.170.68) ---
+# --- Amazon AWS / CloudFront ---
 IP-CIDR,18.172.0.0/15,no-resolve
 IP-CIDR,13.224.0.0/14,no-resolve
 
-# --- Google / Cloudflare (基于日志 IP: 142.250.73.72) ---
+# --- Google / Cloudflare ---
 IP-CIDR,142.250.0.0/15,no-resolve
 IP-CIDR,172.64.0.0/13,no-resolve
 IP-CIDR,104.16.0.0/12,no-resolve
