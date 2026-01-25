@@ -1,4 +1,4 @@
-# 内容：欧美直播与视频专线 (Chaturbate, Stripchat, MyFreeCams, DoodStream, Camwhores 等)
+# 内容：欧美直播、视频专线及 IPTV (Chaturbate, DoodStream, Camwhores, GoodIPTV 等)
 # 更新：2025-01-25
 # 策略建议：此列表建议强制走美国/英国高质量住宅或优质机房节点
 
@@ -21,12 +21,12 @@ DOMAIN-SUFFIX,myfreecams.com
 DOMAIN-SUFFIX,mfcimg.com
 DOMAIN-KEYWORD,myfreecams
 
-# --- Bongacams (新增推荐) ---
+# --- Bongacams ---
 DOMAIN-SUFFIX,bongacams.com
 DOMAIN-SUFFIX,bngcdn.com
 DOMAIN-KEYWORD,bongacams
 
-# --- Camsoda (新增推荐) ---
+# --- Camsoda ---
 DOMAIN-SUFFIX,camsoda.com
 DOMAIN-KEYWORD,camsoda
 
@@ -66,21 +66,33 @@ DOMAIN-SUFFIX,dood.watch
 DOMAIN-KEYWORD,doodstream
 DOMAIN-KEYWORD,dood
 
-# --- Streamtape (新增推荐 - IP 限制极严) ---
+# --- Streamtape (IP 限制极严) ---
 DOMAIN-SUFFIX,streamtape.com
 DOMAIN-SUFFIX,stape.one
 DOMAIN-SUFFIX,stape.video
 DOMAIN-SUFFIX,streamtape.net
 DOMAIN-KEYWORD,streamtape
 
-# --- Voe.sx & MixDrop (新增推荐 - 常见第三方播放器) ---
+# --- Voe.sx & MixDrop ---
 DOMAIN-SUFFIX,voe.sx
 DOMAIN-SUFFIX,mixdrop.co
 DOMAIN-SUFFIX,mixdrop.to
 DOMAIN-SUFFIX,mixdrop.ag
 
 # ============================================================
-# 3. 通用关键词与 CDN 兜底
+# 3. IPTV 与 电视直播 (IPTV & Live Streaming)
+# ============================================================
+
+# --- GoodIPTV (Vidhub 常用源) ---
+DOMAIN-KEYWORD,goodiptv
+
+# --- 其他常见 IPTV 关键词兜底 ---
+DOMAIN-KEYWORD,iptv
+DOMAIN-KEYWORD,m3u8
+DOMAIN-KEYWORD,stream-link
+
+# ============================================================
+# 4. 通用关键词与 CDN 兜底
 # ============================================================
 DOMAIN-KEYWORD,mmcdn
 DOMAIN-KEYWORD,camstatic
