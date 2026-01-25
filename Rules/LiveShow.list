@@ -1,13 +1,13 @@
 # 内容：欧美直播、视频托管及 IPTV 深度 CDN 梳理版 (最终整合版)
 # 更新：2026-01-25
 # 优化：基于用户日志抓取高流量节点 (highwebmedia, doodcdn, alhapi, IP-CIDR)
+# 新增：Lovense 交互 API、Google CDN 与 AWS 传输节点
 
 # ============================================================
 # 1. 核心直播流分发网络 (Live Streaming CDNs - 流量大户)
 # ============================================================
 
 # --- Chaturbate / Highwebmedia 体系 ---
-# 日志显示实时信令走 highwebmedia，视频切片走 mmcdn 边缘节点
 DOMAIN-SUFFIX,mmcdn.com
 DOMAIN-SUFFIX,cbstatic.com
 DOMAIN-SUFFIX,chaturbate.com
@@ -37,7 +37,6 @@ DOMAIN-SUFFIX,myfreecams.com
 # ============================================================
 
 # --- Vidplay / MyVidPlay / Vidstream 深度集群 ---
-# 承载了大量 .m3u8 索引和 .ts 分片，补全了 VizCloud 和 MegaCloud
 DOMAIN-SUFFIX,myvidplay.com
 DOMAIN-SUFFIX,mvidplay.com
 DOMAIN-SUFFIX,vidplay.online
@@ -45,6 +44,7 @@ DOMAIN-SUFFIX,vidplay.site
 DOMAIN-SUFFIX,vidplay.me
 DOMAIN-SUFFIX,vidplay.to
 DOMAIN-SUFFIX,vidplay.biz
+DOMAIN-SUFFIX,vidplay.info
 DOMAIN-SUFFIX,vidplay.pro
 DOMAIN-SUFFIX,vidplay.icu
 DOMAIN-SUFFIX,vidplay.vip
@@ -70,7 +70,6 @@ DOMAIN-KEYWORD,vizcloud
 DOMAIN-KEYWORD,megacloud
 
 # --- DoodStream 集群 (深度补全 doodcdn) ---
-# 日志中发现的高频下载点：doodcdn.io, doodcdn.co
 DOMAIN-SUFFIX,doodstream.com
 DOMAIN-SUFFIX,doodstream.co
 DOMAIN-SUFFIX,d0000d.com
@@ -114,17 +113,26 @@ DOMAIN-SUFFIX,stape.me
 DOMAIN-KEYWORD,streamtape
 DOMAIN-KEYWORD,stape
 
-# --- 其他常见分发站 ---
+# --- 其他分发站 (MixDrop, Voe, UpStream, Vidmoly, SpankBang, Eporner) ---
 DOMAIN-SUFFIX,mixdrop.co
 DOMAIN-SUFFIX,mixdrop.to
+DOMAIN-SUFFIX,mixdrop.ag
 DOMAIN-SUFFIX,voe.sx
+DOMAIN-SUFFIX,voe-network.net
 DOMAIN-SUFFIX,upstream.to
 DOMAIN-SUFFIX,vidmoly.me
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,sb-cd.com
+DOMAIN-SUFFIX,eporner.com
 
 # ============================================================
-# 3. 关联工具与 IPTV (Associated Tools & IPTV)
+# 3. 关联工具与浏览器 (Associated Tools & Interaction)
 # ============================================================
-# 日志显示：如果你使用 Aloha 浏览器，这些 API 请求必须走专线
+# Lovense API: 远程同步互动插件
+DOMAIN-SUFFIX,lovense-api.com
+DOMAIN-SUFFIX,lovense.com
+
+# Aloha 隐私浏览器 API
 DOMAIN-SUFFIX,alhapi.com
 DOMAIN-SUFFIX,alohaprofile.com
 
@@ -135,10 +143,10 @@ DOMAIN-KEYWORD,stream-link
 DOMAIN-KEYWORD,m3u8-delivery
 
 # ============================================================
-# 4. IP-CIDR 规则补全 (日志抓取的真实流量 IP 段)
+# 4. IP-CIDR 规则补全 (基于流量抓取的真实分发节点)
 # ============================================================
 
-# --- CDN77 / DataCamp (日志 IP: 131.153.85.61) ---
+# --- CDN77 / DataCamp / 131.153 (重点捕获) ---
 IP-CIDR,131.153.0.0/16,no-resolve
 IP-CIDR,89.187.160.0/19,no-resolve
 IP-CIDR,45.10.0.0/16,no-resolve
@@ -147,7 +155,12 @@ IP-CIDR,45.10.0.0/16,no-resolve
 IP-CIDR,141.94.0.0/16,no-resolve
 IP-CIDR,51.0.0.0/8,no-resolve
 
-# --- Cloudflare 视频流 (日志 IP: 104.18.207.112) ---
+# --- Amazon AWS / CloudFront (基于日志 IP: 18.172.170.68) ---
+IP-CIDR,18.172.0.0/15,no-resolve
+IP-CIDR,13.224.0.0/14,no-resolve
+
+# --- Google / Cloudflare (基于日志 IP: 142.250.73.72) ---
+IP-CIDR,142.250.0.0/15,no-resolve
 IP-CIDR,172.64.0.0/13,no-resolve
 IP-CIDR,104.16.0.0/12,no-resolve
 
