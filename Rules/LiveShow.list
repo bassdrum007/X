@@ -1,14 +1,15 @@
-# 内容：欧美直播、视频专线及 IPTV (Chaturbate, DoodStream, Camwhores, GoodIPTV 等)
+# 内容：欧美直播、视频专线及 IPTV (Chaturbate, DoodStream, Camwhores, Vidplay 全家族)
 # 更新：2025-01-25
-# 策略建议：此列表建议强制走美国/英国高质量住宅或优质机房节点
+# 优化重点：深度调整 DoodStream 及类似高动态域名站点的覆盖逻辑，解决 IP 屏蔽导致的 403 错误
 
 # ============================================================
-# 1. 成人直播平台 (Live Cam Platforms)
+# 1. 成人直播平台 (Live Cam Platforms - 建议走高质量美西节点)
 # ============================================================
 
 # --- Chaturbate ---
 DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-KEYWORD,chaturbate
+DOMAIN-SUFFIX,cbstatic.com
 
 # --- Stripchat & XhamsterLive ---
 DOMAIN-SUFFIX,stripchat.com
@@ -31,7 +32,7 @@ DOMAIN-SUFFIX,camsoda.com
 DOMAIN-KEYWORD,camsoda
 
 # ============================================================
-# 2. 视频托管与播放 (Tube & Hosting - IP 敏感类)
+# 2. 视频托管与播放 (Tube & Hosting - 高动态域名 & IP 敏感)
 # ============================================================
 
 # --- Camwhores ---
@@ -40,14 +41,24 @@ DOMAIN-SUFFIX,camwhores.tv
 DOMAIN-SUFFIX,camwhores.com
 DOMAIN-KEYWORD,camwhores
 
-# --- MyVidPlay / Vidplay ---
+# --- MyVidPlay / Vidplay (全家族覆盖) ---
 DOMAIN-SUFFIX,myvidplay.com
 DOMAIN-SUFFIX,mvidplay.com
 DOMAIN-SUFFIX,vidplay.online
 DOMAIN-SUFFIX,vidplay.site
+DOMAIN-SUFFIX,vidplay.me
+DOMAIN-SUFFIX,vidplay.to
+DOMAIN-SUFFIX,vidplay.biz
+DOMAIN-SUFFIX,vidplay.info
+DOMAIN-SUFFIX,vidplay.pro
+DOMAIN-SUFFIX,vidplay.icu
+DOMAIN-SUFFIX,vidplay.vip
+DOMAIN-SUFFIX,vidplay.cc
+DOMAIN-SUFFIX,vidplay.org
 DOMAIN-KEYWORD,myvidplay
+DOMAIN-KEYWORD,vidplay
 
-# --- DoodStream (高动态域名家族) ---
+# --- DoodStream (深度补全动态后缀) ---
 DOMAIN-SUFFIX,doodstream.com
 DOMAIN-SUFFIX,dood.so
 DOMAIN-SUFFIX,dood.la
@@ -61,23 +72,35 @@ DOMAIN-SUFFIX,dood.video
 DOMAIN-SUFFIX,dood.to
 DOMAIN-SUFFIX,dood.re
 DOMAIN-SUFFIX,dood.yt
-DOMAIN-SUFFIX,ds2play.com
 DOMAIN-SUFFIX,dood.watch
+DOMAIN-SUFFIX,dood.stream
+DOMAIN-SUFFIX,ds2play.com
+DOMAIN-SUFFIX,ds2video.com
 DOMAIN-KEYWORD,doodstream
 DOMAIN-KEYWORD,dood
 
-# --- Streamtape (IP 限制极严) ---
+# --- Streamtape (后缀跳变极快) ---
 DOMAIN-SUFFIX,streamtape.com
 DOMAIN-SUFFIX,stape.one
 DOMAIN-SUFFIX,stape.video
+DOMAIN-SUFFIX,stape.site
+DOMAIN-SUFFIX,stape.me
 DOMAIN-SUFFIX,streamtape.net
+DOMAIN-SUFFIX,streamadblock.com
 DOMAIN-KEYWORD,streamtape
+DOMAIN-KEYWORD,stape
 
-# --- Voe.sx & MixDrop ---
+# --- Voe.sx / MixDrop / UpStream (第三方常用播放器) ---
 DOMAIN-SUFFIX,voe.sx
+DOMAIN-SUFFIX,voe-network.net
 DOMAIN-SUFFIX,mixdrop.co
 DOMAIN-SUFFIX,mixdrop.to
 DOMAIN-SUFFIX,mixdrop.ag
+DOMAIN-SUFFIX,mixdrop.sx
+DOMAIN-SUFFIX,upstream.to
+DOMAIN-SUFFIX,vidmoly.me
+DOMAIN-KEYWORD,mixdrop
+DOMAIN-KEYWORD,upstream
 
 # ============================================================
 # 3. IPTV 与 电视直播 (IPTV & Live Streaming)
@@ -96,4 +119,5 @@ DOMAIN-KEYWORD,stream-link
 # ============================================================
 DOMAIN-KEYWORD,mmcdn
 DOMAIN-KEYWORD,camstatic
+DOMAIN-KEYWORD,stream-content
 # 备注：camstatic 用于捕捉直播间静态资源，规避 cam 关键词的过度误伤
