@@ -1,33 +1,87 @@
-# 欧美直播与视频专线规则
-# 包含 Chaturbate, Stripchat, MyFreeCams, DoodStream, MyVidPlay
-# 策略：关键词捕捉 + 动态域名覆盖
+# 内容：欧美直播与视频专线 (Chaturbate, Stripchat, MyFreeCams, DoodStream, Camwhores 等)
+# 更新：2025-01-25
+# 策略建议：此列表建议强制走美国/英国高质量住宅或优质机房节点
+
+# ============================================================
+# 1. 成人直播平台 (Live Cam Platforms)
+# ============================================================
 
 # --- Chaturbate ---
 DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-KEYWORD,chaturbate
 
-# --- MyFreeCams ---
-DOMAIN-SUFFIX,myfreecams.com
-DOMAIN-SUFFIX,mfcimg.com
-
-# --- Stripchat ---
+# --- Stripchat & XhamsterLive ---
 DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,strpst.com
 DOMAIN-SUFFIX,xhamsterlive.com
+DOMAIN-KEYWORD,stripchat
 
-# --- MyVidPlay ---
+# --- MyFreeCams ---
+DOMAIN-SUFFIX,myfreecams.com
+DOMAIN-SUFFIX,mfcimg.com
+DOMAIN-KEYWORD,myfreecams
+
+# --- Bongacams (新增推荐) ---
+DOMAIN-SUFFIX,bongacams.com
+DOMAIN-SUFFIX,bngcdn.com
+DOMAIN-KEYWORD,bongacams
+
+# --- Camsoda (新增推荐) ---
+DOMAIN-SUFFIX,camsoda.com
+DOMAIN-KEYWORD,camsoda
+
+# ============================================================
+# 2. 视频托管与播放 (Tube & Hosting - IP 敏感类)
+# ============================================================
+
+# --- Camwhores ---
+DOMAIN-SUFFIX,camwhores.video
+DOMAIN-SUFFIX,camwhores.tv
+DOMAIN-SUFFIX,camwhores.com
+DOMAIN-KEYWORD,camwhores
+
+# --- MyVidPlay / Vidplay ---
 DOMAIN-SUFFIX,myvidplay.com
+DOMAIN-SUFFIX,mvidplay.com
+DOMAIN-SUFFIX,vidplay.online
+DOMAIN-SUFFIX,vidplay.site
 DOMAIN-KEYWORD,myvidplay
 
-# --- DoodStream (多变域名) ---
+# --- DoodStream (高动态域名家族) ---
 DOMAIN-SUFFIX,doodstream.com
 DOMAIN-SUFFIX,dood.so
 DOMAIN-SUFFIX,dood.la
 DOMAIN-SUFFIX,dood.wf
 DOMAIN-SUFFIX,dood.cx
 DOMAIN-SUFFIX,dood.sh
+DOMAIN-SUFFIX,dood.li
+DOMAIN-SUFFIX,dood.pm
+DOMAIN-SUFFIX,dood.ws
+DOMAIN-SUFFIX,dood.video
+DOMAIN-SUFFIX,dood.to
+DOMAIN-SUFFIX,dood.re
+DOMAIN-SUFFIX,dood.yt
+DOMAIN-SUFFIX,ds2play.com
+DOMAIN-SUFFIX,dood.watch
+DOMAIN-KEYWORD,doodstream
 DOMAIN-KEYWORD,dood
 
-# --- 通用关键词 (兜底) ---
+# --- Streamtape (新增推荐 - IP 限制极严) ---
+DOMAIN-SUFFIX,streamtape.com
+DOMAIN-SUFFIX,stape.one
+DOMAIN-SUFFIX,stape.video
+DOMAIN-SUFFIX,streamtape.net
+DOMAIN-KEYWORD,streamtape
+
+# --- Voe.sx & MixDrop (新增推荐 - 常见第三方播放器) ---
+DOMAIN-SUFFIX,voe.sx
+DOMAIN-SUFFIX,mixdrop.co
+DOMAIN-SUFFIX,mixdrop.to
+DOMAIN-SUFFIX,mixdrop.ag
+
+# ============================================================
+# 3. 通用关键词与 CDN 兜底
+# ============================================================
 DOMAIN-KEYWORD,mmcdn
-DOMAIN-KEYWORD,cam
+DOMAIN-KEYWORD,camstatic
+# 备注：camstatic 用于捕捉直播间静态资源，规避 cam 关键词的过度误伤
