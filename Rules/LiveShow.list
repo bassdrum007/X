@@ -1,47 +1,44 @@
-# 内容：欧美直播、视频专线及 IPTV (Chaturbate, DoodStream, Camwhores, Vidplay 全家族)
+# 内容：欧美直播、视频托管及 IPTV 深度 CDN 梳理版
 # 更新：2025-01-25
-# 优化重点：深度调整 DoodStream 及类似高动态域名站点的覆盖逻辑，解决 IP 屏蔽导致的 403 错误
+# 逻辑：按核心分发网络 (CDN) 维度梳理，确保视频流、静态资源和播放接口全路径走专线
 
 # ============================================================
-# 1. 成人直播平台 (Live Cam Platforms - 建议走高质量美西节点)
+# 1. 核心直播流分发网络 (Live Streaming CDNs)
 # ============================================================
 
-# --- Chaturbate ---
-DOMAIN-SUFFIX,chaturbate.com
-DOMAIN-KEYWORD,chaturbate
+# --- Chaturbate 体系 (核心：mmcdn) ---
+# 承载了 CB 绝大部分的实时视频流和直播间预览
+DOMAIN-SUFFIX,mmcdn.com
 DOMAIN-SUFFIX,cbstatic.com
+DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-KEYWORD,mmcdn
+DOMAIN-KEYWORD,chaturbate
 
-# --- Stripchat & XhamsterLive ---
-DOMAIN-SUFFIX,stripchat.com
+# --- Stripchat 体系 (核心：doppiocdn) ---
+# 它是 Stripchat、XhamsterLive 及其家族站点的核心传输网
+DOMAIN-SUFFIX,doppiocdn.com
 DOMAIN-SUFFIX,strpst.com
+DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,xhamsterlive.com
+DOMAIN-KEYWORD,doppiocdn
 DOMAIN-KEYWORD,stripchat
 
-# --- MyFreeCams ---
-DOMAIN-SUFFIX,myfreecams.com
-DOMAIN-SUFFIX,mfcimg.com
-DOMAIN-KEYWORD,myfreecams
-
-# --- Bongacams ---
-DOMAIN-SUFFIX,bongacams.com
+# --- Bongacams & Camsoda 体系 ---
 DOMAIN-SUFFIX,bngcdn.com
-DOMAIN-KEYWORD,bongacams
-
-# --- Camsoda ---
+DOMAIN-SUFFIX,bongacams.com
 DOMAIN-SUFFIX,camsoda.com
-DOMAIN-KEYWORD,camsoda
+DOMAIN-KEYWORD,bngcdn
+
+# --- MyFreeCams 体系 ---
+DOMAIN-SUFFIX,mfcimg.com
+DOMAIN-SUFFIX,myfreecams.com
 
 # ============================================================
-# 2. 视频托管与播放 (Tube & Hosting - 高动态域名 & IP 敏感)
+# 2. 视频托管与高动态集群 (Video Hosting & Storage Clusters)
 # ============================================================
 
-# --- Camwhores ---
-DOMAIN-SUFFIX,camwhores.video
-DOMAIN-SUFFIX,camwhores.tv
-DOMAIN-SUFFIX,camwhores.com
-DOMAIN-KEYWORD,camwhores
-
-# --- MyVidPlay / Vidplay (全家族覆盖) ---
+# --- Vidplay / MyVidPlay 家族集群 ---
+# 该集群特点是后缀极多，且使用大量动态产生的子域名进行分流
 DOMAIN-SUFFIX,myvidplay.com
 DOMAIN-SUFFIX,mvidplay.com
 DOMAIN-SUFFIX,vidplay.online
@@ -55,11 +52,14 @@ DOMAIN-SUFFIX,vidplay.icu
 DOMAIN-SUFFIX,vidplay.vip
 DOMAIN-SUFFIX,vidplay.cc
 DOMAIN-SUFFIX,vidplay.org
-DOMAIN-KEYWORD,myvidplay
 DOMAIN-KEYWORD,vidplay
+DOMAIN-KEYWORD,myvidplay
 
-# --- DoodStream (深度补全动态后缀) ---
+# --- DoodStream 集群 (多区域 CDN 负载) ---
+# Dood 拥有庞大的自建节点，后缀包含大量地域性缩写，确保捕捉到所有视频传输域名
 DOMAIN-SUFFIX,doodstream.com
+DOMAIN-SUFFIX,ds2play.com
+DOMAIN-SUFFIX,ds2video.com
 DOMAIN-SUFFIX,dood.so
 DOMAIN-SUFFIX,dood.la
 DOMAIN-SUFFIX,dood.wf
@@ -74,12 +74,12 @@ DOMAIN-SUFFIX,dood.re
 DOMAIN-SUFFIX,dood.yt
 DOMAIN-SUFFIX,dood.watch
 DOMAIN-SUFFIX,dood.stream
-DOMAIN-SUFFIX,ds2play.com
-DOMAIN-SUFFIX,ds2video.com
-DOMAIN-KEYWORD,doodstream
+DOMAIN-SUFFIX,dood.tf
+DOMAIN-SUFFIX,dood.cc
 DOMAIN-KEYWORD,dood
 
-# --- Streamtape (后缀跳变极快) ---
+# --- Streamtape & Stape 集群 ---
+# 其 CDN 节点通常以 stape 开头，对 IP 质量要求极高
 DOMAIN-SUFFIX,streamtape.com
 DOMAIN-SUFFIX,stape.one
 DOMAIN-SUFFIX,stape.video
@@ -90,34 +90,37 @@ DOMAIN-SUFFIX,streamadblock.com
 DOMAIN-KEYWORD,streamtape
 DOMAIN-KEYWORD,stape
 
-# --- Voe.sx / MixDrop / UpStream (第三方常用播放器) ---
-DOMAIN-SUFFIX,voe.sx
-DOMAIN-SUFFIX,voe-network.net
+# --- MixDrop / Voe / UpStream / Vidmoly (混合第三方集群) ---
 DOMAIN-SUFFIX,mixdrop.co
 DOMAIN-SUFFIX,mixdrop.to
 DOMAIN-SUFFIX,mixdrop.ag
 DOMAIN-SUFFIX,mixdrop.sx
+DOMAIN-SUFFIX,voe.sx
+DOMAIN-SUFFIX,voe-network.net
 DOMAIN-SUFFIX,upstream.to
 DOMAIN-SUFFIX,vidmoly.me
 DOMAIN-KEYWORD,mixdrop
-DOMAIN-KEYWORD,upstream
 
 # ============================================================
-# 3. IPTV 与 电视直播 (IPTV & Live Streaming)
+# 3. IPTV 与 电视广播传输 (IPTV & Global Delivery)
 # ============================================================
 
-# --- GoodIPTV (Vidhub 常用源) ---
+# --- GoodIPTV (Vidhub 关键流地址) ---
 DOMAIN-KEYWORD,goodiptv
 
-# --- 其他常见 IPTV 关键词兜底 ---
+# --- 通用 IPTV 分发关键字 ---
+# 捕获那些隐藏在 m3u8 列表中的直接流域名
 DOMAIN-KEYWORD,iptv
-DOMAIN-KEYWORD,m3u8
 DOMAIN-KEYWORD,stream-link
+DOMAIN-KEYWORD,m3u8-delivery
 
 # ============================================================
-# 4. 通用关键词与 CDN 兜底
+# 4. 通用关键词与 CDN 兜底 (Generic Identifiers)
 # ============================================================
+# 关键说明：mmcdn (Chaturbate) 和 doppiocdn (Stripchat) 是最重要的视频流 CDN。
 DOMAIN-KEYWORD,mmcdn
+DOMAIN-KEYWORD,doppiocdn
+# camstatic: 用于直播站点的封面、JS 加载
 DOMAIN-KEYWORD,camstatic
+# stream-content: 常见的第三方加速镜像
 DOMAIN-KEYWORD,stream-content
-# 备注：camstatic 用于捕捉直播间静态资源，规避 cam 关键词的过度误伤
