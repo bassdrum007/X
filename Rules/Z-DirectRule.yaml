@@ -28,4 +28,46 @@ DOMAIN-KEYWORD,kuromisubs
 DOMAIN-KEYWORD,xiaoaisound
 DOMAIN-KEYWORD,mitvos
 
+# 公共 DNS 直连
+# Cloudflare
+IP-CIDR,1.1.1.1/32,no-resolve
+IP-CIDR,1.0.0.1/32,no-resolve
+# Google
+IP-CIDR,8.8.8.8/32,no-resolve
+IP-CIDR,8.8.4.4/32,no-resolve
+# Quad9
+IP-CIDR,9.9.9.9/32,no-resolve
+IP-CIDR,149.112.112.112/32,no-resolve
+# OpenDNS
+IP-CIDR,208.67.222.222/32,no-resolve
+IP-CIDR,208.67.220.220/32,no-resolve
+# AdGuard
+IP-CIDR,94.140.14.14/32,no-resolve
+IP-CIDR,94.140.15.15/32,no-resolve
+# Verisign
+IP-CIDR,64.6.64.6/32,no-resolve
+IP-CIDR,64.6.65.6/32,no-resolve
+# 国内公共 DNS
+IP-CIDR,223.5.5.5/32,no-resolve
+IP-CIDR,223.6.6.6/32,no-resolve
+IP-CIDR,119.29.29.29/32,no-resolve
+IP-CIDR,114.114.114.114/32,no-resolve
+IP-CIDR,114.114.115.115/32,no-resolve
+IP-CIDR,180.76.76.76/32,no-resolve
 
+# 公共 DNS IPv6 直连
+# Cloudflare
+IP-CIDR6,2606:4700:4700::1111/128,no-resolve
+IP-CIDR6,2606:4700:4700::1001/128,no-resolve
+# Google
+IP-CIDR6,2001:4860:4860::8888/128,no-resolve
+IP-CIDR6,2001:4860:4860::8844/128,no-resolve
+# Quad9
+IP-CIDR6,2620:fe::fe/128,no-resolve
+IP-CIDR6,2620:fe::9/128,no-resolve
+# OpenDNS
+IP-CIDR6,2620:119:35::35/128,no-resolve
+IP-CIDR6,2620:119:53::53/128,no-resolve
+# AdGuard
+IP-CIDR6,2a10:50c0::ad1:ff/128,no-resolve
+IP-CIDR6,2a10:50c0::ad2:ff/128,no-resolve
