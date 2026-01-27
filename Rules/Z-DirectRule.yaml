@@ -1,3 +1,38 @@
+# 公共 DNS 直连
+# Cloudflare
+IP-CIDR,1.1.1.1/32,no-resolve
+IP-CIDR,1.0.0.1/32,no-resolve
+# Google
+IP-CIDR,8.8.8.8/32,no-resolve
+IP-CIDR,8.8.4.4/32,no-resolve
+# Quad9
+IP-CIDR,9.9.9.9/32,no-resolve
+IP-CIDR,149.112.112.112/32,no-resolve
+# OpenDNS
+IP-CIDR,208.67.222.222/32,no-resolve
+IP-CIDR,208.67.220.220/32,no-resolve
+# AdGuard
+IP-CIDR,94.140.14.14/32,no-resolve
+IP-CIDR,94.140.15.15/32,no-resolve
+# Level3
+IP-CIDR,4.2.2.1/32,no-resolve
+IP-CIDR,4.2.2.2/32,no-resolve
+IP-CIDR,4.2.2.3/32,no-resolve
+IP-CIDR,4.2.2.4/32,no-resolve
+IP-CIDR,4.2.2.5/32,no-resolve
+IP-CIDR,4.2.2.6/32,no-resolve
+# AliDNS
+IP-CIDR,223.5.5.5/32,no-resolve
+IP-CIDR,223.6.6.6/32,no-resolve
+# DNSPod
+IP-CIDR,119.29.29.29/32,no-resolve
+# 114DNS
+IP-CIDR,114.114.114.114/32,no-resolve
+IP-CIDR,114.114.115.115/32,no-resolve
+# BaiduDNS
+IP-CIDR,180.76.76.76/32,no-resolve
+
+
 # Nexitally订阅直连
 DOMAIN-KEYWORD,iqbuud
 DOMAIN-KEYWORD,kumgrb
