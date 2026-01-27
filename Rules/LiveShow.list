@@ -1,5 +1,5 @@
 # 内容：欧美直播、视频托管及 IPTV 深度 CDN 梳理版 (最终整合版)
-# 更新：2026-01-25
+# 更新：2026-01-27
 # 优化：基于用户日志抓取高流量节点 (highwebmedia, doodcdn, alhapi, IP-CIDR)
 # 新增：Lovense 交互 API、Google CDN 与 AWS 传输节点
 # 修复：补全了 assets.striiiipst.com (Stripchat) 与 162.249.x.x / 163.237.x.x (CDN77)
@@ -74,16 +74,26 @@ DOMAIN-KEYWORD,myvidplay
 DOMAIN-KEYWORD,vizcloud
 DOMAIN-KEYWORD,megacloud
 
-# --- DoodStream 集群 (深度补全 doodcdn) ---
+# --- DoodStream 集群 (2026-01-27 优化补全) ---
+# 主站域名
 DOMAIN-SUFFIX,doodstream.com
 DOMAIN-SUFFIX,doodstream.co
+DOMAIN-SUFFIX,doodstream.me
+# 镜像域名 (d0000d / do0od / dooood 变体)
 DOMAIN-SUFFIX,d0000d.com
 DOMAIN-SUFFIX,d0000d.net
+DOMAIN-SUFFIX,do0od.com
+DOMAIN-SUFFIX,dooood.com
+DOMAIN-SUFFIX,dooodster.com
+# 播放器/嵌入域名
 DOMAIN-SUFFIX,ds2play.com
 DOMAIN-SUFFIX,ds2video.com
+# CDN 域名 (图片/视频分发)
 DOMAIN-SUFFIX,doodcdn.io
 DOMAIN-SUFFIX,doodcdn.co
 DOMAIN-SUFFIX,doodcdn.com
+DOMAIN-SUFFIX,video-delivery.net
+# dood.* 短域名集群
 DOMAIN-SUFFIX,dood.so
 DOMAIN-SUFFIX,dood.la
 DOMAIN-SUFFIX,dood.wf
@@ -102,9 +112,14 @@ DOMAIN-SUFFIX,dood.tf
 DOMAIN-SUFFIX,dood.cc
 DOMAIN-SUFFIX,dood.pro
 DOMAIN-SUFFIX,dood.online
+DOMAIN-SUFFIX,dood.one
+DOMAIN-SUFFIX,dood.network
+DOMAIN-SUFFIX,doods.pro
+# 关键词兜底
 DOMAIN-KEYWORD,dood
 DOMAIN-KEYWORD,d0000d
 DOMAIN-KEYWORD,doodcdn
+DOMAIN-KEYWORD,video-delivery
 
 # --- Streamtape & Stape 家族 ---
 DOMAIN-SUFFIX,streamtape.com
