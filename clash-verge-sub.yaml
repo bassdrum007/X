@@ -1,154 +1,282 @@
+# Clash Verge 订阅配置 — 直接使用，不经过 subconverter
+# 更新: 2026-06-28
+
 port: 7890
 socks-port: 7891
 allow-lan: true
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
+secret: ""
+
 proxy-providers:
-  Provider_42DAC0:
+  AllNodes:
     type: http
     url: https://gist.githubusercontent.com/bassdrum007/4f1ed83a77cf2b12102a5549271c37e0/raw/GitAfica
     interval: 3600
+    path: ./providers/AllNodes.yaml
     proxy: DIRECT
-    path: ./providers/Provider_42DAC0.yaml
-    exclude-filter: (到期|剩余流量|时间|官网|产品)
     health-check:
       enable: true
-      url: https://cp.cloudflare.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 300
     override:
       skip-cert-verify: true
       udp: true
+
 proxy-groups:
+  - name: 📶 流量
+    type: select
+    use: [AllNodes]
+    filter: "(500|GB|Expire|Until|流量|到期|套餐|🈳|🈵|🉑)"
+
   - name: 🎯 总模式
     type: select
-    proxies:
-      - Ⓜ️ 延迟最低
-      - 👉 手动切换
-      - DIRECT
-  - name: Ⓜ️ 延迟最低
+    proxies: [✈️ 机场, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🇺🇸 美国节点, 🛠️ 特殊节点, 👉 手动切换, DIRECT]
+
+  - name: ✈️ 机场
+    type: select
+    proxies: [✈️ Africa, ✈️ 翟, ✈️ WD, ✈️ 付]
+
+  - name: ✈️ Africa
     type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    use:
-      - Provider_42DAC0
-    filter: (港|HK|Hong Kong|台|新北|彰化|TW|Taiwan|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|KR|Korea|KOR|首尔|韩|韓|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
+    url: http://cp.cloudflare.com/generate_204
+    interval: 120
+    use: [AllNodes]
+    filter: "^(?!.*(500|Day|Expire|Traffic|Until|剩余|流量|到期|套餐|🈳|🈵|🉑)).*(Imm|Nexitally).*$"
+
+  - name: ✈️ 翟
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 120
+    use: [AllNodes]
+    filter: "^(?!.*(500|Day|Expire|Traffic|Until|剩余|流量|到期|套餐|🈳|🈵|🉑)).*翟.*$"
+
+  - name: ✈️ WD
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 120
+    use: [AllNodes]
+    filter: "^(?!.*(500|Day|Expire|Traffic|Until|剩余|流量|到期|套餐|🈳|🈵|🉑)).*WD.*$"
+
+  - name: ✈️ 付
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 120
+    use: [AllNodes]
+    filter: "^(?!.*(500|Day|Expire|Traffic|Until|剩余|流量|到期|套餐|🈳|🈵|🉑)).*付.*$"
+
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: https://www.youtube.com/generate_204
+    interval: 120
+    tolerance: 20
+    use: [AllNodes]
+    filter: "(港|HK|Hong Kong)"
+
+  - name: 🇼🇸 台湾节点
+    type: url-test
+    url: https://www.youtube.com/generate_204
+    interval: 120
+    tolerance: 20
+    use: [AllNodes]
+    filter: "(台|新北|彰化|TW|Taiwan)"
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 120
+    tolerance: 20
+    use: [AllNodes]
+    filter: "(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]JP|Japan)"
+
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 120
+    tolerance: 20
+    use: [AllNodes]
+    filter: "(KR|Korea|KOR|首尔|韩|韓)"
+
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 120
+    tolerance: 20
+    use: [AllNodes]
+    filter: "(新加坡|坡|狮城|SG|Singapore)"
+
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: https://chat.openai.com/cdn-cgi/trace
+    interval: 120
+    tolerance: 20
+    use: [AllNodes]
+    filter: "(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|Chicago|US|United States)"
+
+  - name: 🛠️ 特殊节点
+    type: select
+    use: [AllNodes]
+    filter: "^(?!.*(500|Day|Expire|Traffic|Until|剩余|流量|到期|🈳|🈵|🉑|港|HK|Hong Kong|台|新北|彰化|TW|Taiwan|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]JP|Japan|KR|Korea|KOR|首尔|韩|韓|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)).*"
+
   - name: 👉 手动切换
     type: select
-    use:
-      - Provider_42DAC0
-    filter: ^(?!.*(?:流量|GB|Expire|Until|到期|套餐|🈳|🈵|🉑)).*(港|HK|Hong Kong|台|新北|彰化|TW|Taiwan|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]JP|Japan|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
+    use: [AllNodes]
+    filter: "(港|HK|Hong Kong|台|新北|彰化|TW|Taiwan|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]JP|Japan|新加坡|坡|狮城|SG|Singapore|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)"
+
+  - name: ❗ YouTube
+    type: select
+    proxies: [🇼🇸 台湾节点, 🎯 总模式, 🇭🇰 香港节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换, DIRECT]
+
+  - name: 📺 Netflix
+    type: select
+    proxies: [🇭🇰 香港节点, 🎯 总模式, 🇼🇸 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换, DIRECT]
+
+  - name: 🤖 AI 服务
+    type: select
+    proxies: [🇺🇸 美国节点, 🎯 总模式, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换, DIRECT]
+
+  - name: ♨️ Lifestyle
+    type: select
+    proxies: [🎯 总模式, 🇺🇸 美国节点, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换, DIRECT]
+
+  - name: ⛩ 日韩媒体
+    type: select
+    proxies: [🇯🇵 日本节点, 🎯 总模式, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇺🇸 美国节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换, DIRECT]
+
+  - name: 🍏 苹果服务
+    type: select
+    proxies: [DIRECT, 🎯 总模式, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换]
+
+  - name: 💠 微软服务
+    type: select
+    proxies: [DIRECT, 🎯 总模式, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇺🇸 美国节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换]
+
+  - name: 🌐 谷歌服务
+    type: select
+    proxies: [🇺🇸 美国节点, 🎯 总模式, DIRECT, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换]
+
   - name: 🇨🇳 国内网站
     type: select
-    proxies:
-      - DIRECT
-      - 🎯 总模式
+    proxies: [DIRECT, 🎯 总模式]
+
+  - name: 🎭 LiveShow
+    type: select
+    proxies: [🇺🇸 美国节点, 🎯 总模式, 🇭🇰 香港节点, 🇼🇸 台湾节点, 🇯🇵 日本节点, 🇰🇷 韩国节点, 🇸🇬 狮城节点, 🛠️ 特殊节点, 👉 手动切换, DIRECT]
+
   - name: 🛑 广告拦截
     type: select
-    proxies:
-      - REJECT
-      - DIRECT
+    proxies: [REJECT, DIRECT]
+
   - name: ⭕ 漏网之鱼
     type: select
-    proxies:
-      - 🎯 总模式
-      - DIRECT
+    proxies: [🎯 总模式, DIRECT]
+
+rule-providers:
+  BanAD:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    interval: 86400
+
+  BanProgramAD:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    interval: 86400
+
+  China:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.list
+    interval: 86400
+
+  YouTube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+    interval: 86400
+
+  Netflix:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+    interval: 86400
+
+  OpenAI:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list
+    interval: 86400
+
+  Claude:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.list
+    interval: 86400
+
+  Gemini:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.list
+    interval: 86400
+
+  Copilot:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list
+    interval: 86400
+
+  GitHub:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
+    interval: 86400
+
 rules:
-  - DOMAIN-KEYWORD,admarvel,🛑 广告拦截
-  - DOMAIN-KEYWORD,admaster,🛑 广告拦截
-  - DOMAIN-KEYWORD,adsage,🛑 广告拦截
-  - DOMAIN-KEYWORD,adsensor,🛑 广告拦截
-  - DOMAIN-KEYWORD,adsmogo,🛑 广告拦截
-  - DOMAIN-KEYWORD,adsrvmedia,🛑 广告拦截
-  - DOMAIN-KEYWORD,adsserving,🛑 广告拦截
-  - DOMAIN-KEYWORD,adsystem,🛑 广告拦截
-  - DOMAIN-KEYWORD,adwords,🛑 广告拦截
-  - DOMAIN-KEYWORD,applovin,🛑 广告拦截
-  - DOMAIN-KEYWORD,appsflyer,🛑 广告拦截
-  - DOMAIN-KEYWORD,domob,🛑 广告拦截
-  - DOMAIN-KEYWORD,duomeng,🛑 广告拦截
-  - DOMAIN-KEYWORD,dwtrack,🛑 广告拦截
-  - DOMAIN-KEYWORD,guanggao,🛑 广告拦截
-  - DOMAIN-KEYWORD,omgmta,🛑 广告拦截
-  - DOMAIN-KEYWORD,omniture,🛑 广告拦截
-  - DOMAIN-KEYWORD,openx,🛑 广告拦截
-  - DOMAIN-KEYWORD,partnerad,🛑 广告拦截
-  - DOMAIN-KEYWORD,pingfore,🛑 广告拦截
-  - DOMAIN-KEYWORD,socdm,🛑 广告拦截
-  - DOMAIN-KEYWORD,supersonicads,🛑 广告拦截
-  - DOMAIN-KEYWORD,wlmonitor,🛑 广告拦截
-  - DOMAIN-KEYWORD,zjtoolbar,🛑 广告拦截
-  - RULE-SET,BanAD (Domain),🛑 广告拦截
-  - DOMAIN-KEYWORD,omgmtaw,🛑 广告拦截
-  - RULE-SET,BanProgramAD (Domain),🛑 广告拦截
-  - RULE-SET,BanProgramAD (IP-CIDR),🛑 广告拦截,no-resolve
-  - DOMAIN-KEYWORD,iqbuud,DIRECT
-  - DOMAIN-KEYWORD,kumgrb,DIRECT
-  - DOMAIN-KEYWORD,bpnigk,DIRECT
+  - RULE-SET,BanAD,🛑 广告拦截
+  - RULE-SET,BanProgramAD,🛑 广告拦截
+
+  - RULE-SET,YouTube,❗ YouTube
+  - RULE-SET,Netflix,📺 Netflix
+
+  - RULE-SET,OpenAI,🤖 AI 服务
+  - RULE-SET,Claude,🤖 AI 服务
+  - RULE-SET,Gemini,🤖 AI 服务
+  - RULE-SET,Copilot,🤖 AI 服务
+  - RULE-SET,GitHub,🤖 AI 服务
+
+  - DOMAIN-KEYWORD,instagram,♨️ Lifestyle
+  - DOMAIN-KEYWORD,pinterest,♨️ Lifestyle
+  - DOMAIN-KEYWORD,twitter,♨️ Lifestyle
+  - DOMAIN-KEYWORD,spotify,♨️ Lifestyle
+  - DOMAIN-KEYWORD,facebook,♨️ Lifestyle
+  - DOMAIN-KEYWORD,tiktok,♨️ Lifestyle
+  - DOMAIN-KEYWORD,telegram,♨️ Lifestyle
+  - DOMAIN-KEYWORD,discord,♨️ Lifestyle
+  - DOMAIN-KEYWORD,steam,♨️ Lifestyle
+
+  - DOMAIN-KEYWORD,dmm,⛩ 日韩媒体
+
+  - DOMAIN-KEYWORD,apple,🍏 苹果服务
+  - DOMAIN-KEYWORD,icloud,🍏 苹果服务
+
+  - DOMAIN-KEYWORD,microsoft,💠 微软服务
+  - DOMAIN-KEYWORD,office,💠 微软服务
+
+  - DOMAIN-KEYWORD,google,🌐 谷歌服务
+
+  - DOMAIN-KEYWORD,liveshow,🎭 LiveShow
+
   - DOMAIN-KEYWORD,nexconvert,DIRECT
-  - DOMAIN-KEYWORD,zenithgrid,DIRECT
-  - DOMAIN-KEYWORD,oxycontin,DIRECT
-  - DOMAIN-KEYWORD,id9,DIRECT
-  - DOMAIN-KEYWORD,dler,DIRECT
-  - DOMAIN-KEYWORD,kuromisubs,DIRECT
-  - DOMAIN-KEYWORD,xiaoaisound,DIRECT
-  - DOMAIN-KEYWORD,mitvos,DIRECT
-  - RULE-SET,Z-DirectRule (Domain),DIRECT
-  - RULE-SET,Z-DirectRule (IP-CIDR),DIRECT,no-resolve
+  - DOMAIN-KEYWORD,kumgrb,DIRECT
+  - DOMAIN-KEYWORD,kuromis,DIRECT
+  
+  - IP-CIDR,43.172.5.16/32,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+
+  - RULE-SET,China,🇨🇳 国内网站
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - DOMAIN-KEYWORD,.tmall.com,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,alicdn,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,alipay,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,aliyun,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,baidu,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,beplay,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,microsoft,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,officecdn,🇨🇳 国内网站
-  - DOMAIN-KEYWORD,taobao,🇨🇳 国内网站
-  - RULE-SET,China (Domain),🇨🇳 国内网站
-  - RULE-SET,China (IP-CIDR),🇨🇳 国内网站,no-resolve
+
   - MATCH,⭕ 漏网之鱼
-rule-providers:
-  BanAD (Domain):
-    type: http
-    behavior: domain
-    url: "https://converter.007e.icu/subconverter/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuQUQubGlzdA"
-    path: ./providers/5345470858595246832_domain.yaml
-    interval: 86400
-  BanProgramAD (Domain):
-    type: http
-    behavior: domain
-    url: "https://converter.007e.icu/subconverter/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuUHJvZ3JhbUFELmxpc3Q"
-    path: ./providers/12627286518854712958_domain.yaml
-    interval: 86400
-  BanProgramAD (IP-CIDR):
-    type: http
-    behavior: ipcidr
-    url: "https://converter.007e.icu/subconverter/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuUHJvZ3JhbUFELmxpc3Q"
-    path: ./providers/12627286518854712958_ipcidr.yaml
-    interval: 86400
-  Z-DirectRule (Domain):
-    type: http
-    behavior: domain
-    url: "https://converter.007e.icu/subconverter/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jhc3NkcnVtMDA3L1gvcmVmcy9oZWFkcy9tYXN0ZXIvUnVsZXMvWi1EaXJlY3RSdWxlLnlhbWw"
-    path: ./providers/3895898075645855754_domain.yaml
-    interval: 86400
-  Z-DirectRule (IP-CIDR):
-    type: http
-    behavior: ipcidr
-    url: "https://converter.007e.icu/subconverter/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jhc3NkcnVtMDA3L1gvcmVmcy9oZWFkcy9tYXN0ZXIvUnVsZXMvWi1EaXJlY3RSdWxlLnlhbWw"
-    path: ./providers/3895898075645855754_ipcidr.yaml
-    interval: 86400
-  China (Domain):
-    type: http
-    behavior: domain
-    url: "https://converter.007e.icu/subconverter/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmEvQ2hpbmEubGlzdA"
-    path: ./providers/14614068387735384431_domain.yaml
-    interval: 86400
-  China (IP-CIDR):
-    type: http
-    behavior: ipcidr
-    url: "https://converter.007e.icu/subconverter/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmEvQ2hpbmEubGlzdA"
-    path: ./providers/14614068387735384431_ipcidr.yaml
-    interval: 86400
