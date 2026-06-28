@@ -37,7 +37,6 @@ IP-CIDR,180.76.76.76/32,no-resolve
 
 
 # Nexitally订阅直连
-DOMAIN-KEYWORD,iqbuud
 DOMAIN-KEYWORD,kumgrb
 DOMAIN-KEYWORD,bpnigk
 DOMAIN-KEYWORD,nexconvert
@@ -60,10 +59,18 @@ DOMAIN-KEYWORD,dler
 
 
 # Kuromis订阅直连
-DOMAIN-KEYWORD,kuromisubs
+DOMAIN-SUFFIX,kuromis.com
 
 # 小爱音箱直连
 DOMAIN-KEYWORD,xiaoaisound
 DOMAIN-KEYWORD,mitvos
+
+# 腾讯云服务器直连
+IP-CIDR,43.172.5.16/32,no-resolve
+
+# SubConverter / GitHub raw 直连
+DOMAIN-SUFFIX,converter.007e.icu
+DOMAIN-SUFFIX,raw.githubusercontent.com
+DOMAIN-SUFFIX,gist.githubusercontent.com
 
 
