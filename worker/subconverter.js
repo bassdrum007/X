@@ -6,10 +6,10 @@
  */
 
 const CONFIG = {
-  // SubConverter 后端（使用公共后端，也可以换成自建的）
-  backend: 'https://sub.xeton.dev',
+  // SubConverter 后端（指向腾讯云自建服务）
+  backend: 'https://converter.007e.icu/subconverter',
   // 你的自定义配置文件
-  config: 'https://raw.githubusercontent.com/bassdrum007/X/master/Z.ini',
+  config: 'https://007e.icu/clash/Z.ini',
 };
 
 export default {
