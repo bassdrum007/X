@@ -51,7 +51,16 @@ DOMAIN-SUFFIX,flyert.com
 DOMAIN-SUFFIX,gandi.net
 DOMAIN-SUFFIX,snapdrop.net
 DOMAIN,download.jetbrains.com
-DOMAIN,origin-a.akamaihd.net // Origin Download
+# Origin download
+DOMAIN,origin-a.akamaihd.net
+
+# Router custom DIRECT rules
+DOMAIN-SUFFIX,cdn.zenithgrid.co
+DOMAIN-SUFFIX,resourcemap.lol
+DOMAIN-SUFFIX,api.prodigal4936.com
+DOMAIN-SUFFIX,cdn.primehelix.co
+DOMAIN-SUFFIX,api.wd-turbo.com
+DOMAIN-SUFFIX,api-huacloud.com
 
 # ACL4SSR订阅直连
 DOMAIN-KEYWORD,id9
@@ -72,5 +81,4 @@ IP-CIDR,43.172.5.16/32,no-resolve
 DOMAIN-SUFFIX,converter.007e.icu
 DOMAIN-SUFFIX,raw.githubusercontent.com
 DOMAIN-SUFFIX,gist.githubusercontent.com
-
 
