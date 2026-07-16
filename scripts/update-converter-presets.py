@@ -27,12 +27,10 @@ MAX_DISCOVERED = int(os.environ.get("MAX_DISCOVERED", "6"))
 MIN_STARS = int(os.environ.get("MIN_STARS", "0"))
 MAX_REPO_AGE_DAYS = int(os.environ.get("MAX_REPO_AGE_DAYS", "365"))
 MAX_FILE_AGE_DAYS = int(os.environ.get("MAX_FILE_AGE_DAYS", "180"))
-SEARCH_LIMIT = int(os.environ.get("SEARCH_LIMIT", "40"))
+SEARCH_LIMIT = int(os.environ.get("SEARCH_LIMIT", "100"))
 
 SEARCH_QUERIES = [
     '"[custom]" "custom_proxy_group=" extension:ini',
-    '"ruleset=" "custom_proxy_group=" extension:ini',
-    '"enable_rule_generator=true" extension:ini',
 ]
 
 EXCLUDED_REPOSITORIES = {
@@ -71,7 +69,11 @@ def api_request(url: str, *, accept: str = "application/vnd.github+json", timeou
         except urllib.error.HTTPError as exc:
             if exc.code not in (429, 500, 502, 503) or attempt == 2:
                 raise
-            time.sleep(1.5 * (attempt + 1))
+            if exc.code == 429:
+                retry_after = int(exc.headers.get("Retry-After") or 20)
+                time.sleep(min(60, retry_after * (attempt + 1)))
+            else:
+                time.sleep(1.5 * (attempt + 1))
     raise RuntimeError("unreachable")
 
 
