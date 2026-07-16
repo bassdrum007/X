@@ -225,6 +225,9 @@ def verify_with_converter(candidate: dict):
 
 def preset_from_candidate(candidate: dict):
     stem = candidate["path"].rsplit("/", 1)[-1].rsplit(".", 1)[0]
+    owner, repo_name = candidate["repo"].split("/", 1)
+    generic_names = {"1", "clash", "config", "rules", "sub", "clashconfig", "clash_ini", "private_clash_rules"}
+    display_repo = owner if repo_name.lower() in generic_names or repo_name.isdigit() else repo_name
     slug_base = re.sub(r"[^a-z0-9]+", "-", f"{candidate['repo']}-{stem}".lower()).strip("-")
     digest = hashlib.sha1(f"{candidate['repo']}:{candidate['path']}".encode()).hexdigest()[:7]
     preset_id = f"auto-{slug_base[:42]}-{digest}"
@@ -232,7 +235,7 @@ def preset_from_candidate(candidate: dict):
     updated = candidate["commit_date"].astimezone(CHINA_TZ).date().isoformat()
     return {
         "id": preset_id,
-        "name": f"{candidate['repo'].split('/')[-1]} · {stem}",
+        "name": f"{display_repo} · {stem}",
         "description": f"自动发现并验证 · {candidate['rules']} 条规则源 · {candidate['groups']} 个代理组",
         "source_url": candidate["source_url"],
         "source_repo": candidate["repo"],
