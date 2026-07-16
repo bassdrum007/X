@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "updated": "2026-07-16T23:30:00+08:00",
+  "presets": [
+    {
+      "id": "z",
+      "name": "Z.ini 完整版",
+      "description": "完整分流方案，覆盖广告、流媒体、AI 服务与地区节点组。",
+      "source_url": "https://raw.githubusercontent.com/bassdrum007/X/refs/heads/master/Z.ini",
+      "recommended": true,
+      "enabled": true,
+      "updated": "2026-07-16"
+    },
+    {
+      "id": "zz",
+      "name": "Zz.ini 精简版",
+      "description": "精简代理组和规则数量，适合追求轻量与快速加载。",
+      "source_url": "https://raw.githubusercontent.com/bassdrum007/X/refs/heads/master/Zz.ini",
+      "recommended": false,
+      "enabled": true,
+      "updated": "2026-07-16"
+    },
+    {
+      "id": "clash-connect",
+      "name": "ClashConnect 社区版",
+      "description": "社区维护的通用分流方案，包含 AI、流媒体、广告与国内直连。",
+      "source_url": "https://raw.githubusercontent.com/ClashConnectRules/Clash/refs/heads/main/rules.ini",
+      "recommended": false,
+      "enabled": true,
+      "updated": "2025-10-09"
+    }
+  ]
+}
