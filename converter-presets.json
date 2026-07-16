@@ -1,33 +1,120 @@
 {
-  "version": 1,
-  "updated": "2026-07-16T23:30:00+08:00",
+  "version": 2,
+  "updated": "2026-07-17T00:46:46+08:00",
+  "generator": {
+    "mode": "github-auto-discovery",
+    "searched": 85,
+    "static_passed": 17,
+    "verified": 6
+  },
   "presets": [
     {
       "id": "z",
       "name": "Z.ini 完整版",
-      "description": "完整分流方案，覆盖广告、流媒体、AI 服务与地区节点组。",
+      "description": "稳定方案 · 完整分流，覆盖广告、流媒体、AI 服务与地区节点组。",
       "source_url": "https://raw.githubusercontent.com/bassdrum007/X/refs/heads/master/Z.ini",
+      "source_repo": "bassdrum007/X",
       "recommended": true,
       "enabled": true,
-      "updated": "2026-07-16"
+      "discovered": false,
+      "verified_at": "2026-07-17",
+      "updated": "2026-07-17"
     },
     {
       "id": "zz",
       "name": "Zz.ini 精简版",
-      "description": "精简代理组和规则数量，适合追求轻量与快速加载。",
+      "description": "稳定方案 · 精简代理组和规则数量，适合轻量与快速加载。",
       "source_url": "https://raw.githubusercontent.com/bassdrum007/X/refs/heads/master/Zz.ini",
+      "source_repo": "bassdrum007/X",
       "recommended": false,
       "enabled": true,
-      "updated": "2026-07-16"
+      "discovered": false,
+      "verified_at": "2026-07-17",
+      "updated": "2026-07-17"
     },
     {
-      "id": "clash-connect",
-      "name": "ClashConnect 社区版",
-      "description": "社区维护的通用分流方案，包含 AI、流媒体、广告与国内直连。",
-      "source_url": "https://raw.githubusercontent.com/ClashConnectRules/Clash/refs/heads/main/rules.ini",
+      "id": "auto-cutethotw-clashrule-back-71c9495",
+      "name": "ClashRule · Back",
+      "description": "自动发现并验证 · 7 条规则源 · 3 个代理组",
+      "source_url": "https://raw.githubusercontent.com/cutethotw/ClashRule/refs/heads/main/Back.ini",
+      "source_repo": "cutethotw/ClashRule",
+      "source_path": "Back.ini",
+      "stars": 913,
       "recommended": false,
       "enabled": true,
-      "updated": "2025-10-09"
+      "discovered": true,
+      "verified_at": "2026-07-17",
+      "updated": "2026-06-02"
+    },
+    {
+      "id": "auto-qinguanlou-convert-cfa-1278e22",
+      "name": "convert · CFA",
+      "description": "自动发现并验证 · 130 条规则源 · 47 个代理组",
+      "source_url": "https://raw.githubusercontent.com/qinguanlou/convert/refs/heads/main/CFA.ini",
+      "source_repo": "qinguanlou/convert",
+      "source_path": "CFA.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-17",
+      "updated": "2026-06-21"
+    },
+    {
+      "id": "auto-duoluo1234-clash-smart-a49acac",
+      "name": "clash · smart",
+      "description": "自动发现并验证 · 47 条规则源 · 34 个代理组",
+      "source_url": "https://raw.githubusercontent.com/duoluo1234/clash/refs/heads/main/smart.ini",
+      "source_repo": "duoluo1234/clash",
+      "source_path": "smart.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-17",
+      "updated": "2026-06-23"
+    },
+    {
+      "id": "auto-crazy1wh-openclashrules-stable-20061b2",
+      "name": "OpenClashRules · stable",
+      "description": "自动发现并验证 · 30 条规则源 · 25 个代理组",
+      "source_url": "https://raw.githubusercontent.com/Crazy1wh/OpenClashRules/refs/heads/main/stable.ini",
+      "source_repo": "Crazy1wh/OpenClashRules",
+      "source_path": "stable.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-17",
+      "updated": "2026-06-12"
+    },
+    {
+      "id": "auto-gipts-markray-mix017-ea2c401",
+      "name": "markray · Mix017",
+      "description": "自动发现并验证 · 43 条规则源 · 50 个代理组",
+      "source_url": "https://raw.githubusercontent.com/GIPtS/markray/refs/heads/main/Mix017.ini",
+      "source_repo": "GIPtS/markray",
+      "source_path": "Mix017.ini",
+      "stars": 1,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-17",
+      "updated": "2026-04-10"
+    },
+    {
+      "id": "auto-helaygo-gugu-bob-7a74560",
+      "name": "gugu · bob",
+      "description": "自动发现并验证 · 13 条规则源 · 14 个代理组",
+      "source_url": "https://raw.githubusercontent.com/helaygo/gugu/refs/heads/main/bob.ini",
+      "source_repo": "helaygo/gugu",
+      "source_path": "bob.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-17",
+      "updated": "2026-05-30"
     }
   ]
 }
