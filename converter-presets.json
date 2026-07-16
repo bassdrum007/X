@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-17T00:52:34+08:00",
+  "updated": "2026-07-17T00:56:49+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
@@ -62,7 +62,7 @@
     },
     {
       "id": "auto-ty458666883-1-ty1-1be4af2",
-      "name": "1 · ty1",
+      "name": "ty458666883 · ty1",
       "description": "自动发现并验证 · 37 条规则源 · 31 个代理组",
       "source_url": "https://raw.githubusercontent.com/ty458666883/1/refs/heads/main/ty1.ini",
       "source_repo": "ty458666883/1",
@@ -76,7 +76,7 @@
     },
     {
       "id": "auto-xegony-clash-ini-noad-0b5a9d3",
-      "name": "clash_ini · noad",
+      "name": "Xegony · noad",
       "description": "自动发现并验证 · 53 条规则源 · 29 个代理组",
       "source_url": "https://raw.githubusercontent.com/Xegony/clash_ini/refs/heads/main/noad.ini",
       "source_repo": "Xegony/clash_ini",
@@ -90,7 +90,7 @@
     },
     {
       "id": "auto-pual397-clashconfig-onlyai-3b3bf45",
-      "name": "clashconfig · onlyai",
+      "name": "Pual397 · onlyai",
       "description": "自动发现并验证 · 16 条规则源 · 14 个代理组",
       "source_url": "https://raw.githubusercontent.com/Pual397/clashconfig/refs/heads/main/onlyai.ini",
       "source_repo": "Pual397/clashconfig",
@@ -104,7 +104,7 @@
     },
     {
       "id": "auto-banezzz-private-clash-rules-main-d42e747",
-      "name": "private_clash_rules · main",
+      "name": "Banezzz · main",
       "description": "自动发现并验证 · 35 条规则源 · 35 个代理组",
       "source_url": "https://raw.githubusercontent.com/Banezzz/private_clash_rules/refs/heads/main/main.ini",
       "source_repo": "Banezzz/private_clash_rules",
