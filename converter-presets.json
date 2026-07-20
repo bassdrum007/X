@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "updated": "2026-07-20T03:36:00+08:00",
+  "updated": "2026-07-21T03:59:49+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
-    "static_passed": 12,
+    "static_passed": 11,
     "verified": 6
   },
   "presets": [
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-20",
-      "updated": "2026-07-20"
+      "verified_at": "2026-07-21",
+      "updated": "2026-07-21"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-20",
-      "updated": "2026-07-20"
+      "verified_at": "2026-07-21",
+      "updated": "2026-07-21"
     },
     {
       "id": "auto-cutethotw-clashrule-back-71c9495",
@@ -39,11 +39,11 @@
       "source_url": "https://raw.githubusercontent.com/cutethotw/ClashRule/refs/heads/main/Back.ini",
       "source_repo": "cutethotw/ClashRule",
       "source_path": "Back.ini",
-      "stars": 914,
+      "stars": 916,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-20",
+      "verified_at": "2026-07-21",
       "updated": "2026-06-02"
     },
     {
@@ -57,50 +57,36 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-20",
+      "verified_at": "2026-07-21",
       "updated": "2026-07-07"
     },
     {
-      "id": "auto-ty458666883-1-ty1-1be4af2",
-      "name": "ty458666883 · ty1",
-      "description": "自动发现并验证 · 37 条规则源 · 31 个代理组",
-      "source_url": "https://raw.githubusercontent.com/ty458666883/1/refs/heads/main/ty1.ini",
+      "id": "auto-xegony-clash-ini-noad-0b5a9d3",
+      "name": "Xegony · noad",
+      "description": "自动发现并验证 · 53 条规则源 · 29 个代理组",
+      "source_url": "https://raw.githubusercontent.com/Xegony/clash_ini/refs/heads/main/noad.ini",
+      "source_repo": "Xegony/clash_ini",
+      "source_path": "noad.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-21",
+      "updated": "2026-05-01"
+    },
+    {
+      "id": "auto-ty458666883-1-4-c8c7d21",
+      "name": "ty458666883 · 4",
+      "description": "自动发现并验证 · 31 条规则源 · 26 个代理组",
+      "source_url": "https://raw.githubusercontent.com/ty458666883/1/refs/heads/main/4.ini",
       "source_repo": "ty458666883/1",
-      "source_path": "ty1.ini",
+      "source_path": "4.ini",
       "stars": 0,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-20",
+      "verified_at": "2026-07-21",
       "updated": "2026-05-27"
-    },
-    {
-      "id": "auto-plsy1-myclashconfig-config-ca7a511",
-      "name": "myClashConfig · config",
-      "description": "自动发现并验证 · 13 条规则源 · 21 个代理组",
-      "source_url": "https://raw.githubusercontent.com/plsy1/myClashConfig/refs/heads/main/config.ini",
-      "source_repo": "plsy1/myClashConfig",
-      "source_path": "config.ini",
-      "stars": 1,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-07-20",
-      "updated": "2026-06-18"
-    },
-    {
-      "id": "auto-youzhi1233-rule-fuh7-a98c0dc",
-      "name": "rule · fuh7",
-      "description": "自动发现并验证 · 6 条规则源 · 14 个代理组",
-      "source_url": "https://raw.githubusercontent.com/youzhi1233/rule/refs/heads/main/fuh7.ini",
-      "source_repo": "youzhi1233/rule",
-      "source_path": "fuh7.ini",
-      "stars": 0,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-07-20",
-      "updated": "2026-07-04"
     },
     {
       "id": "auto-hugqq-clashrule-rule-fdd5c24",
@@ -113,8 +99,22 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-20",
+      "verified_at": "2026-07-21",
       "updated": "2026-06-07"
+    },
+    {
+      "id": "auto-xhkj0762-clash-dns-f15fc33",
+      "name": "xhkj0762 · dns",
+      "description": "自动发现并验证 · 12 条规则源 · 2 个代理组",
+      "source_url": "https://raw.githubusercontent.com/xhkj0762/clash/refs/heads/main/dns.ini",
+      "source_repo": "xhkj0762/clash",
+      "source_path": "dns.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-21",
+      "updated": "2026-07-08"
     }
   ]
 }
