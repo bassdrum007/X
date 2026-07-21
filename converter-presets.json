@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-21T03:59:49+08:00",
+  "updated": "2026-07-22T03:55:44+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-21",
-      "updated": "2026-07-21"
+      "verified_at": "2026-07-22",
+      "updated": "2026-07-22"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-21",
-      "updated": "2026-07-21"
+      "verified_at": "2026-07-22",
+      "updated": "2026-07-22"
     },
     {
       "id": "auto-cutethotw-clashrule-back-71c9495",
@@ -39,11 +39,11 @@
       "source_url": "https://raw.githubusercontent.com/cutethotw/ClashRule/refs/heads/main/Back.ini",
       "source_repo": "cutethotw/ClashRule",
       "source_path": "Back.ini",
-      "stars": 916,
+      "stars": 915,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-21",
+      "verified_at": "2026-07-22",
       "updated": "2026-06-02"
     },
     {
@@ -57,7 +57,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-21",
+      "verified_at": "2026-07-22",
       "updated": "2026-07-07"
     },
     {
@@ -71,7 +71,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-21",
+      "verified_at": "2026-07-22",
       "updated": "2026-05-01"
     },
     {
@@ -85,7 +85,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-21",
+      "verified_at": "2026-07-22",
       "updated": "2026-05-27"
     },
     {
@@ -99,7 +99,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-21",
+      "verified_at": "2026-07-22",
       "updated": "2026-06-07"
     },
     {
@@ -113,7 +113,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-21",
+      "verified_at": "2026-07-22",
       "updated": "2026-07-08"
     }
   ]
