@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "updated": "2026-07-23T03:48:27+08:00",
+  "updated": "2026-07-24T03:49:54+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
-    "static_passed": 11,
+    "static_passed": 7,
     "verified": 6
   },
   "presets": [
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-23",
-      "updated": "2026-07-23"
+      "verified_at": "2026-07-24",
+      "updated": "2026-07-24"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-23",
-      "updated": "2026-07-23"
+      "verified_at": "2026-07-24",
+      "updated": "2026-07-24"
     },
     {
       "id": "auto-cutethotw-clashrule-back-71c9495",
@@ -43,78 +43,78 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-23",
+      "verified_at": "2026-07-24",
       "updated": "2026-06-02"
     },
     {
-      "id": "auto-lengedliu-clash-full-d9f9cce",
-      "name": "lengedliu · full",
-      "description": "自动发现并验证 · 26 条规则源 · 40 个代理组",
-      "source_url": "https://raw.githubusercontent.com/lengedliu/clash/refs/heads/main/full.ini",
-      "source_repo": "lengedliu/clash",
-      "source_path": "full.ini",
-      "stars": 0,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-07-23",
-      "updated": "2026-07-07"
-    },
-    {
-      "id": "auto-xegony-clash-ini-noad-0b5a9d3",
-      "name": "Xegony · noad",
-      "description": "自动发现并验证 · 53 条规则源 · 29 个代理组",
-      "source_url": "https://raw.githubusercontent.com/Xegony/clash_ini/refs/heads/main/noad.ini",
+      "id": "auto-xegony-clash-ini-cf-a44f8a7",
+      "name": "Xegony · cf",
+      "description": "自动发现并验证 · 53 条规则源 · 31 个代理组",
+      "source_url": "https://raw.githubusercontent.com/Xegony/clash_ini/refs/heads/main/cf.ini",
       "source_repo": "Xegony/clash_ini",
-      "source_path": "noad.ini",
+      "source_path": "cf.ini",
       "stars": 0,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-23",
-      "updated": "2026-05-01"
+      "verified_at": "2026-07-24",
+      "updated": "2026-06-11"
     },
     {
-      "id": "auto-ty458666883-1-4-c8c7d21",
-      "name": "ty458666883 · 4",
-      "description": "自动发现并验证 · 31 条规则源 · 26 个代理组",
-      "source_url": "https://raw.githubusercontent.com/ty458666883/1/refs/heads/main/4.ini",
-      "source_repo": "ty458666883/1",
-      "source_path": "4.ini",
+      "id": "auto-xu348025782-csguize-ac-93628d7",
+      "name": "csguize · AC",
+      "description": "自动发现并验证 · 17 条规则源 · 16 个代理组",
+      "source_url": "https://raw.githubusercontent.com/xu348025782/csguize/refs/heads/main/AC.ini",
+      "source_repo": "xu348025782/csguize",
+      "source_path": "AC.ini",
       "stars": 0,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-23",
-      "updated": "2026-05-27"
+      "verified_at": "2026-07-24",
+      "updated": "2026-07-14"
     },
     {
-      "id": "auto-hugqq-clashrule-rule-fdd5c24",
-      "name": "ClashRule · Rule",
-      "description": "自动发现并验证 · 18 条规则源 · 18 个代理组",
-      "source_url": "https://raw.githubusercontent.com/hugqq/ClashRule/refs/heads/main/Rule.ini",
-      "source_repo": "hugqq/ClashRule",
-      "source_path": "Rule.ini",
+      "id": "auto-youzhi1233-rule-fuh5-ac7ce19",
+      "name": "rule · fuh5",
+      "description": "自动发现并验证 · 6 条规则源 · 11 个代理组",
+      "source_url": "https://raw.githubusercontent.com/youzhi1233/rule/refs/heads/main/fuh5.ini",
+      "source_repo": "youzhi1233/rule",
+      "source_path": "fuh5.ini",
       "stars": 0,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-23",
-      "updated": "2026-06-07"
+      "verified_at": "2026-07-24",
+      "updated": "2026-06-06"
     },
     {
-      "id": "auto-xhkj0762-clash-dns-f15fc33",
-      "name": "xhkj0762 · dns",
-      "description": "自动发现并验证 · 12 条规则源 · 2 个代理组",
-      "source_url": "https://raw.githubusercontent.com/xhkj0762/clash/refs/heads/main/dns.ini",
-      "source_repo": "xhkj0762/clash",
-      "source_path": "dns.ini",
+      "id": "auto-billyas-multicountry-aaai-cd6600a",
+      "name": "multiCountry · aaai",
+      "description": "自动发现并验证 · 12 条规则源 · 16 个代理组",
+      "source_url": "https://raw.githubusercontent.com/Billyas/multiCountry/refs/heads/main/aaai.ini",
+      "source_repo": "Billyas/multiCountry",
+      "source_path": "aaai.ini",
       "stars": 0,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-23",
-      "updated": "2026-07-08"
+      "verified_at": "2026-07-24",
+      "updated": "2026-04-22"
+    },
+    {
+      "id": "auto-ldsoy-clash-my-7a4bad1",
+      "name": "ldsoy · My",
+      "description": "自动发现并验证 · 13 条规则源 · 6 个代理组",
+      "source_url": "https://raw.githubusercontent.com/ldsoy/Clash/refs/heads/main/My.ini",
+      "source_repo": "ldsoy/Clash",
+      "source_path": "My.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-07-24",
+      "updated": "2026-05-05"
     }
   ]
 }
