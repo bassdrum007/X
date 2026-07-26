@@ -35,13 +35,6 @@ IP-CIDR,114.114.115.115/32,no-resolve
 # BaiduDNS
 IP-CIDR,180.76.76.76/32,no-resolve
 
-
-# Nexitally订阅直连
-DOMAIN-KEYWORD,kumgrb
-DOMAIN-KEYWORD,bpnigk
-DOMAIN-KEYWORD,nexconvert
-DOMAIN-KEYWORD,zenithgrid
-
 # Ytoo订阅直连
 DOMAIN-KEYWORD,oxycontin
 DOMAIN-SUFFIX,sgcc.com
@@ -53,22 +46,9 @@ DOMAIN-SUFFIX,snapdrop.net
 DOMAIN,download.jetbrains.com
 # Origin download
 DOMAIN,origin-a.akamaihd.net
-
-# Router custom DIRECT rules
-DOMAIN-SUFFIX,cdn.zenithgrid.co
-DOMAIN-SUFFIX,resourcemap.lol
-DOMAIN-SUFFIX,api.prodigal4936.com
-DOMAIN-SUFFIX,cdn.primehelix.co
-DOMAIN-SUFFIX,api.wd-turbo.com
-DOMAIN-SUFFIX,api-huacloud.com
-
 # ACL4SSR订阅直连
 DOMAIN-KEYWORD,id9
 DOMAIN-KEYWORD,dler
-
-
-# Kuromis订阅直连
-DOMAIN-SUFFIX,kuromis.com
 
 # 小爱音箱直连
 DOMAIN-KEYWORD,xiaoaisound
@@ -81,4 +61,3 @@ IP-CIDR,43.172.5.16/32,no-resolve
 DOMAIN-SUFFIX,converter.007e.icu
 DOMAIN-SUFFIX,raw.githubusercontent.com
 DOMAIN-SUFFIX,gist.githubusercontent.com
-
