@@ -1,63 +1,7 @@
-# 内网 IP 直连
-IP-CIDR,10.0.0.1/32,no-resolve
-
-# 公共 DNS 直连
-# Cloudflare
-IP-CIDR,1.1.1.1/32,no-resolve
-IP-CIDR,1.0.0.1/32,no-resolve
-# Google
-IP-CIDR,8.8.8.8/32,no-resolve
-IP-CIDR,8.8.4.4/32,no-resolve
-# Quad9
-IP-CIDR,9.9.9.9/32,no-resolve
-IP-CIDR,149.112.112.112/32,no-resolve
-# OpenDNS
-IP-CIDR,208.67.222.222/32,no-resolve
-IP-CIDR,208.67.220.220/32,no-resolve
-# AdGuard
-IP-CIDR,94.140.14.14/32,no-resolve
-IP-CIDR,94.140.15.15/32,no-resolve
-# Level3
-IP-CIDR,4.2.2.1/32,no-resolve
-IP-CIDR,4.2.2.2/32,no-resolve
-IP-CIDR,4.2.2.3/32,no-resolve
-IP-CIDR,4.2.2.4/32,no-resolve
-IP-CIDR,4.2.2.5/32,no-resolve
-IP-CIDR,4.2.2.6/32,no-resolve
-# AliDNS
-IP-CIDR,223.5.5.5/32,no-resolve
-IP-CIDR,223.6.6.6/32,no-resolve
-# DNSPod
-IP-CIDR,119.29.29.29/32,no-resolve
-# 114DNS
-IP-CIDR,114.114.114.114/32,no-resolve
-IP-CIDR,114.114.115.115/32,no-resolve
-# BaiduDNS
-IP-CIDR,180.76.76.76/32,no-resolve
-
-# Ytoo订阅直连
-DOMAIN-KEYWORD,oxycontin
-DOMAIN-SUFFIX,sgcc.com
-DOMAIN-SUFFIX,sgcc.com.cn
-DOMAIN-SUFFIX,sgepri.sgcc.com.cn
-DOMAIN-SUFFIX,flyert.com
-DOMAIN-SUFFIX,gandi.net
-DOMAIN-SUFFIX,snapdrop.net
-DOMAIN,download.jetbrains.com
-# Origin download
-DOMAIN,origin-a.akamaihd.net
-# ACL4SSR订阅直连
-DOMAIN-KEYWORD,id9
-DOMAIN-KEYWORD,dler
-
-# 小爱音箱直连
-DOMAIN-KEYWORD,xiaoaisound
-DOMAIN-KEYWORD,mitvos
-
 # 腾讯云服务器直连
 IP-CIDR,43.172.5.16/32,no-resolve
 
-# SubConverter / GitHub raw 直连
+# SubConverter / GitHub raw 直连（订阅拉取依赖）
 DOMAIN-SUFFIX,converter.007e.icu
 DOMAIN-SUFFIX,raw.githubusercontent.com
 DOMAIN-SUFFIX,gist.githubusercontent.com
