@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-07-26T03:38:21+08:00",
+  "updated": "2026-07-27T03:39:32+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-26",
-      "updated": "2026-07-26"
+      "verified_at": "2026-07-27",
+      "updated": "2026-07-27"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-07-26",
-      "updated": "2026-07-26"
+      "verified_at": "2026-07-27",
+      "updated": "2026-07-27"
     },
     {
       "id": "auto-cutethotw-clashrule-back-71c9495",
@@ -43,7 +43,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-26",
+      "verified_at": "2026-07-27",
       "updated": "2026-06-02"
     },
     {
@@ -57,7 +57,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-26",
+      "verified_at": "2026-07-27",
       "updated": "2026-06-11"
     },
     {
@@ -71,7 +71,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-26",
+      "verified_at": "2026-07-27",
       "updated": "2026-05-27"
     },
     {
@@ -85,7 +85,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-26",
+      "verified_at": "2026-07-27",
       "updated": "2026-06-24"
     },
     {
@@ -99,7 +99,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-26",
+      "verified_at": "2026-07-27",
       "updated": "2026-06-06"
     },
     {
@@ -113,7 +113,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-07-26",
+      "verified_at": "2026-07-27",
       "updated": "2026-04-22"
     }
   ]
