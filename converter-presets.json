@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-08-20T02:56:38+08:00",
+  "updated": "2026-08-22T03:00:52+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 99,
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-08-20",
-      "updated": "2026-08-20"
+      "verified_at": "2026-08-22",
+      "updated": "2026-08-22"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-08-20",
-      "updated": "2026-08-20"
+      "verified_at": "2026-08-22",
+      "updated": "2026-08-22"
     },
     {
       "id": "auto-plsy1-myclashconfig-qx-02a0f98",
@@ -43,7 +43,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-20",
+      "verified_at": "2026-08-22",
       "updated": "2026-07-13"
     },
     {
@@ -57,7 +57,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-20",
+      "verified_at": "2026-08-22",
       "updated": "2026-07-04"
     },
     {
@@ -71,7 +71,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-20",
+      "verified_at": "2026-08-22",
       "updated": "2026-05-15"
     },
     {
@@ -85,7 +85,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-20",
+      "verified_at": "2026-08-22",
       "updated": "2026-03-24"
     }
   ]
