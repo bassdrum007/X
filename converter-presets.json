@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "updated": "2026-08-30T04:58:44+08:00",
+  "updated": "2026-08-31T05:13:20+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
-    "static_passed": 20,
+    "static_passed": 32,
     "verified": 3
   },
   "presets": [
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-08-30",
-      "updated": "2026-08-30"
+      "verified_at": "2026-08-31",
+      "updated": "2026-08-31"
     },
     {
       "id": "zz",
@@ -29,8 +29,22 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-08-30",
-      "updated": "2026-08-30"
+      "verified_at": "2026-08-31",
+      "updated": "2026-08-31"
+    },
+    {
+      "id": "auto-aethersailor-custom-openclash-rules-custom-7fa6561",
+      "name": "Custom_OpenClash_Rules · Custom_Stash_Full",
+      "description": "自动发现并验证 · 54 条规则源 · 52 个代理组",
+      "source_url": "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/refs/heads/main/cfg/Custom_Stash_Full.ini",
+      "source_repo": "Aethersailor/Custom_OpenClash_Rules",
+      "source_path": "cfg/Custom_Stash_Full.ini",
+      "stars": 6420,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-08-31",
+      "updated": "2026-08-24"
     },
     {
       "id": "auto-cutethotw-clashrule-peterhe-3ce13b5",
@@ -43,8 +57,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-30",
-      "updated": "2026-08-27"
+      "verified_at": "2026-08-31",
+      "updated": "2026-08-30"
     },
     {
       "id": "auto-henrychiao-mihomo-yamls-generalclashrule-6d9fde9",
@@ -53,26 +67,12 @@
       "source_url": "https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/refs/heads/main/Overwrite/THEINI/Ordinary/cutethotw/GeneralClashRule.ini",
       "source_repo": "HenryChiao/MIHOMO_YAMLS",
       "source_path": "Overwrite/THEINI/Ordinary/cutethotw/GeneralClashRule.ini",
-      "stars": 2638,
+      "stars": 2643,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "updated": "2026-08-06"
-    },
-    {
-      "id": "auto-pengchujin-tower-acl4ssr-online-full-3981241",
-      "name": "tower · ACL4SSR_Online_Full",
-      "description": "自动发现并验证 · 33 条规则源 · 29 个代理组",
-      "source_url": "https://raw.githubusercontent.com/pengchujin/tower/refs/heads/main/Tower/Resources/ACL4SSR/ACL4SSR_Online_Full.ini",
-      "source_repo": "pengchujin/tower",
-      "source_path": "Tower/Resources/ACL4SSR/ACL4SSR_Online_Full.ini",
-      "stars": 489,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-08-30",
-      "updated": "2026-08-28"
     }
   ]
 }
