@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updated": "2026-08-31T05:13:20+08:00",
+  "updated": "2026-09-01T06:54:44+08:00",
   "generator": {
     "mode": "github-auto-discovery",
-    "searched": 100,
-    "static_passed": 32,
-    "verified": 3
+    "searched": 99,
+    "static_passed": 6,
+    "verified": 4
   },
   "presets": [
     {
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-08-31",
-      "updated": "2026-08-31"
+      "verified_at": "2026-09-01",
+      "updated": "2026-09-01"
     },
     {
       "id": "zz",
@@ -29,50 +29,64 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-08-31",
-      "updated": "2026-08-31"
+      "verified_at": "2026-09-01",
+      "updated": "2026-09-01"
     },
     {
-      "id": "auto-aethersailor-custom-openclash-rules-custom-7fa6561",
-      "name": "Custom_OpenClash_Rules · Custom_Stash_Full",
-      "description": "自动发现并验证 · 54 条规则源 · 52 个代理组",
-      "source_url": "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/refs/heads/main/cfg/Custom_Stash_Full.ini",
-      "source_repo": "Aethersailor/Custom_OpenClash_Rules",
-      "source_path": "cfg/Custom_Stash_Full.ini",
-      "stars": 6420,
+      "id": "auto-plsy1-myclashconfig-qx-02a0f98",
+      "name": "myClashConfig · qx",
+      "description": "自动发现并验证 · 9 条规则源 · 12 个代理组",
+      "source_url": "https://raw.githubusercontent.com/plsy1/myClashConfig/refs/heads/main/qx.ini",
+      "source_repo": "plsy1/myClashConfig",
+      "source_path": "qx.ini",
+      "stars": 1,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-31",
-      "updated": "2026-08-24"
+      "verified_at": "2026-09-01",
+      "updated": "2026-07-13"
     },
     {
-      "id": "auto-cutethotw-clashrule-peterhe-3ce13b5",
-      "name": "ClashRule · PeterHe",
-      "description": "自动发现并验证 · 45 条规则源 · 35 个代理组",
-      "source_url": "https://raw.githubusercontent.com/cutethotw/ClashRule/refs/heads/main/Customization/PeterHe.ini",
-      "source_repo": "cutethotw/ClashRule",
-      "source_path": "Customization/PeterHe.ini",
-      "stars": 926,
+      "id": "auto-youzhi1233-rule-fuh7-a98c0dc",
+      "name": "rule · fuh7",
+      "description": "自动发现并验证 · 6 条规则源 · 14 个代理组",
+      "source_url": "https://raw.githubusercontent.com/youzhi1233/rule/refs/heads/main/fuh7.ini",
+      "source_repo": "youzhi1233/rule",
+      "source_path": "fuh7.ini",
+      "stars": 0,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-31",
-      "updated": "2026-08-30"
+      "verified_at": "2026-09-01",
+      "updated": "2026-07-04"
     },
     {
-      "id": "auto-henrychiao-mihomo-yamls-generalclashrule-6d9fde9",
-      "name": "MIHOMO_YAMLS · GeneralClashRule",
-      "description": "自动发现并验证 · 42 条规则源 · 33 个代理组",
-      "source_url": "https://raw.githubusercontent.com/HenryChiao/MIHOMO_YAMLS/refs/heads/main/Overwrite/THEINI/Ordinary/cutethotw/GeneralClashRule.ini",
-      "source_repo": "HenryChiao/MIHOMO_YAMLS",
-      "source_path": "Overwrite/THEINI/Ordinary/cutethotw/GeneralClashRule.ini",
-      "stars": 2643,
+      "id": "auto-wubaiqing-dotfiles-clash-cbdf4a0",
+      "name": "dotfiles · clash",
+      "description": "自动发现并验证 · 21 条规则源 · 13 个代理组",
+      "source_url": "https://raw.githubusercontent.com/wubaiqing/dotfiles/refs/heads/master/clash.ini",
+      "source_repo": "wubaiqing/dotfiles",
+      "source_path": "clash.ini",
+      "stars": 5,
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-08-31",
-      "updated": "2026-08-06"
+      "verified_at": "2026-09-01",
+      "updated": "2026-05-15"
+    },
+    {
+      "id": "auto-luck777777-clash-rule-clash-783a6fd",
+      "name": "clash-rule · clash",
+      "description": "自动发现并验证 · 12 条规则源 · 5 个代理组",
+      "source_url": "https://raw.githubusercontent.com/LUCK777777/clash-rule/refs/heads/main/clash.ini",
+      "source_repo": "LUCK777777/clash-rule",
+      "source_path": "clash.ini",
+      "stars": 1,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-09-01",
+      "updated": "2026-03-24"
     }
   ]
 }
