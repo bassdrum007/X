@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "updated": "2026-09-18T05:28:51+08:00",
+  "updated": "2026-09-19T04:58:50+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
-    "static_passed": 6,
+    "static_passed": 5,
     "verified": 4
   },
   "presets": [
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-09-18",
-      "updated": "2026-09-18"
+      "verified_at": "2026-09-19",
+      "updated": "2026-09-19"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-09-18",
-      "updated": "2026-09-18"
+      "verified_at": "2026-09-19",
+      "updated": "2026-09-19"
     },
     {
       "id": "auto-plsy1-myclashconfig-qx-02a0f98",
@@ -43,22 +43,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-09-18",
+      "verified_at": "2026-09-19",
       "updated": "2026-07-13"
-    },
-    {
-      "id": "auto-youzhi1233-rule-fuh7-a98c0dc",
-      "name": "rule · fuh7",
-      "description": "自动发现并验证 · 6 条规则源 · 14 个代理组",
-      "source_url": "https://raw.githubusercontent.com/youzhi1233/rule/refs/heads/main/fuh7.ini",
-      "source_repo": "youzhi1233/rule",
-      "source_path": "fuh7.ini",
-      "stars": 0,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-09-18",
-      "updated": "2026-07-04"
     },
     {
       "id": "auto-wubaiqing-dotfiles-clash-cbdf4a0",
@@ -71,8 +57,22 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-09-18",
+      "verified_at": "2026-09-19",
       "updated": "2026-05-15"
+    },
+    {
+      "id": "auto-youzhi1233-rule-fuh3-ef7948b",
+      "name": "rule · fuh3",
+      "description": "自动发现并验证 · 5 条规则源 · 11 个代理组",
+      "source_url": "https://raw.githubusercontent.com/youzhi1233/rule/refs/heads/main/fuh3.ini",
+      "source_repo": "youzhi1233/rule",
+      "source_path": "fuh3.ini",
+      "stars": 0,
+      "recommended": false,
+      "enabled": true,
+      "discovered": true,
+      "verified_at": "2026-09-19",
+      "updated": "2026-05-03"
     },
     {
       "id": "auto-luck777777-clash-rule-clash-783a6fd",
@@ -85,7 +85,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-09-18",
+      "verified_at": "2026-09-19",
       "updated": "2026-03-24"
     }
   ]
