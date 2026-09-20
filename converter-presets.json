@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updated": "2026-09-20T04:48:39+08:00",
+  "updated": "2026-09-21T04:54:28+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 100,
-    "static_passed": 5,
-    "verified": 4
+    "static_passed": 4,
+    "verified": 3
   },
   "presets": [
     {
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-09-20",
-      "updated": "2026-09-20"
+      "verified_at": "2026-09-21",
+      "updated": "2026-09-21"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-09-20",
-      "updated": "2026-09-20"
+      "verified_at": "2026-09-21",
+      "updated": "2026-09-21"
     },
     {
       "id": "auto-plsy1-myclashconfig-qx-02a0f98",
@@ -43,7 +43,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-09-20",
+      "verified_at": "2026-09-21",
       "updated": "2026-07-13"
     },
     {
@@ -57,7 +57,7 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-09-20",
+      "verified_at": "2026-09-21",
       "updated": "2026-05-15"
     },
     {
@@ -71,22 +71,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": true,
-      "verified_at": "2026-09-20",
+      "verified_at": "2026-09-21",
       "updated": "2026-05-03"
-    },
-    {
-      "id": "auto-luck777777-clash-rule-clash-783a6fd",
-      "name": "clash-rule · clash",
-      "description": "自动发现并验证 · 12 条规则源 · 5 个代理组",
-      "source_url": "https://raw.githubusercontent.com/LUCK777777/clash-rule/refs/heads/main/clash.ini",
-      "source_repo": "LUCK777777/clash-rule",
-      "source_path": "clash.ini",
-      "stars": 1,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-09-20",
-      "updated": "2026-03-24"
     }
   ]
 }
