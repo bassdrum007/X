@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "updated": "2026-10-17T05:20:51+08:00",
+  "updated": "2026-10-22T05:48:50+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 99,
-    "static_passed": 5,
-    "verified": 4
+    "static_passed": 4,
+    "verified": 0
   },
   "presets": [
     {
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-10-17",
-      "updated": "2026-10-17"
+      "verified_at": "2026-10-22",
+      "updated": "2026-10-22"
     },
     {
       "id": "zz",
@@ -29,64 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-10-17",
-      "updated": "2026-10-17"
-    },
-    {
-      "id": "auto-musiye14-clash-config-peizhi-471340b",
-      "name": "clash_config · peizhi",
-      "description": "自动发现并验证 · 35 条规则源 · 52 个代理组",
-      "source_url": "https://raw.githubusercontent.com/musiye14/clash_config/refs/heads/master/peizhi.ini",
-      "source_repo": "musiye14/clash_config",
-      "source_path": "peizhi.ini",
-      "stars": 0,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-10-17",
-      "updated": "2026-09-16"
-    },
-    {
-      "id": "auto-plsy1-myclashconfig-qx-02a0f98",
-      "name": "myClashConfig · qx",
-      "description": "自动发现并验证 · 9 条规则源 · 12 个代理组",
-      "source_url": "https://raw.githubusercontent.com/plsy1/myClashConfig/refs/heads/main/qx.ini",
-      "source_repo": "plsy1/myClashConfig",
-      "source_path": "qx.ini",
-      "stars": 1,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-10-17",
-      "updated": "2026-07-13"
-    },
-    {
-      "id": "auto-wubaiqing-dotfiles-clash-cbdf4a0",
-      "name": "dotfiles · clash",
-      "description": "自动发现并验证 · 21 条规则源 · 13 个代理组",
-      "source_url": "https://raw.githubusercontent.com/wubaiqing/dotfiles/refs/heads/master/clash.ini",
-      "source_repo": "wubaiqing/dotfiles",
-      "source_path": "clash.ini",
-      "stars": 5,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-10-17",
-      "updated": "2026-05-15"
-    },
-    {
-      "id": "auto-youzhi1233-rule-fuh3-ef7948b",
-      "name": "rule · fuh3",
-      "description": "自动发现并验证 · 5 条规则源 · 11 个代理组",
-      "source_url": "https://raw.githubusercontent.com/youzhi1233/rule/refs/heads/main/fuh3.ini",
-      "source_repo": "youzhi1233/rule",
-      "source_path": "fuh3.ini",
-      "stars": 0,
-      "recommended": false,
-      "enabled": true,
-      "discovered": true,
-      "verified_at": "2026-10-17",
-      "updated": "2026-05-03"
+      "verified_at": "2026-10-22",
+      "updated": "2026-10-22"
     }
   ]
 }
