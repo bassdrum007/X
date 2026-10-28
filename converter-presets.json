@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "updated": "2026-10-27T06:45:00+08:00",
+  "updated": "2026-10-29T06:41:31+08:00",
   "generator": {
     "mode": "github-auto-discovery",
     "searched": 99,
-    "static_passed": 4,
+    "static_passed": 6,
     "verified": 0
   },
   "presets": [
@@ -17,8 +17,8 @@
       "recommended": true,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-10-27",
-      "updated": "2026-10-27"
+      "verified_at": "2026-10-29",
+      "updated": "2026-10-29"
     },
     {
       "id": "zz",
@@ -29,8 +29,8 @@
       "recommended": false,
       "enabled": true,
       "discovered": false,
-      "verified_at": "2026-10-27",
-      "updated": "2026-10-27"
+      "verified_at": "2026-10-29",
+      "updated": "2026-10-29"
     }
   ]
 }
